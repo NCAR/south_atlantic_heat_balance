@@ -11,3 +11,7 @@ dependencies:
     - jupyter
     - jupyterlab
     - netCDF4
+    - pop_tools
+    - intake 
+    - fsspec
+    - cmocean

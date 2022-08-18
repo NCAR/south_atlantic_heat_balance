@@ -1,0 +1,569 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>CESM2 - LARGE ENSEMBLE (LENS2) &#8212; Analysis Project Template</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CESM2 - LARGE ENSEMBLE (LENS2)" href="Notebook_South_Atlantic_Area.html" />
+    <link rel="prev" title="Sample Notebook" href="Notebook_Template.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Analysis Project Template</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_Template.html">
+   Sample Notebook
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_South_Atlantic_Area.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Notebook_Notes.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Notebook_Notes.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#by-mauricio-rocha-and-dr-gustavo-marques">
+   by Mauricio Rocha and Dr. Gustavo Marques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#before-we-begin-here-are-some-valuable-notes-about-lens2">
+   Before we begin, here are some valuable notes about LENS2:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ssp370-refers-to-the-shared-socioeconomic-pathway-ssp-and-represents-the-forced-scenario-until-the-year-of-2100-the-choice-of-the-ssp3-7-0-scenario-forcing-follows-cmip6-recommendations-oneill-et-al-2016-that-precisely-emphasize-the-value-of-this-relatively-high-forcing-level-so-as-to-quantify-changes-in-natural-variability-rodgers-et-al-2021-ssp37-0-lies-between-rcp6-0-and-rcp8-5-and-represents-the-medium-to-the-high-end-of-the-range-of-future-forcing-pathways">
+   * ssp370: refers to the Shared Socioeconomic Pathway (SSP) and represents the forced scenario until the year of 2100. The choice of the SSP3-7.0 scenario forcing follows CMIP6 recommendations (O’Neill et al., 2016) that precisely emphasize the value of this relatively high forcing level so as to quantify changes in natural variability (Rodgers et al. 2021). SSP3–7.0 lies between RCP6.0 and RCP8.5 and represents the medium to the high end of the range of future forcing pathways.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-s-rcp8-5-means-representative-concentration-pathways-for-8-5-w-m2">
+   P.S.: RCP8.5 means Representative Concentration Pathways for 8.5 W/m².
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#historical-1850-2015-not-projected-period-so-ideal-for-doing-validation-of-lens2-with-reanalysis-or-in-situ-data-because-of-its-spatial-resolution-and-temporal-extent-era5-can-be-used-to-do-this-validation-considering-the-amoc-strength-at-26-5n-as-an-example-fig-s2-in-rodgers-et-al-2021-the-ensemble-mean-amoc-strength-for-each-of-the-micro-perturbation-clusters-initialized-for-years-1231-strength-1251-decreasing-1281-increasing-and-1301-weak-of-the-preindustrial-control-run-averaged-across-20-members-for-each-case-converge-only-after-several-decades-indicative-of-the-timescale-over-which-the-initial-condition-memory-persists-for-amoc-for-this-reason-their-analysis-of-internal-variability-focuses-on-the-period-after-1960-more-than-an-entire-century-after-initialization-how-to-know-what-is-forced-variability-and-natural-variability-one-way-to-check-this-is-to-differentiate-between-members-of-the-same-experiment">
+   * historical (1850 - 2015): not projected period, so ideal for doing validation of LENS2 with reanalysis or in situ data. Because of its spatial resolution and temporal extent, ERA5 can be used to do this validation. Considering the AMOC strength at 26.5N as an example {Fig. S2 in Rodgers et al. (2021)}, the ensemble mean AMOC strength for each of the micro-perturbation clusters initialized for years 1231 (strength), 1251 (decreasing), 1281 (increasing), and 1301 (weak) of the preindustrial control run (averaged across 20 members for each case) converge only after several decades, indicative of the timescale over which the initial condition memory persists for AMOC. For this reason, their analysis of internal variability focuses on the period after 1960, more than an entire century after initialization. How to know what is forced variability and natural variability? One way to check this is to differentiate between members of the same experiment.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cmip-the-first-50-members-of-the-large-ensemble-follow-cmip6-protocols-van-marle-et-al-2017-with-biomass-burning-following-the-description-in-the-cesm2-overview-paper-danabasoglu-et-al-2020-and-this-forcing-is-referred-to-as-cmip6-rodgers-et-al-2021">
+   * cmip: The first 50 members of the large ensemble follow CMIP6 protocols (Van Marle et al., 2017), with biomass burning following the description in the CESM2 overview paper (Danabasoglu et al., 2020), and this forcing is referred to as CMIP6 (Rodgers et al. (2021)).
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#smbb-for-the-second-set-of-50-members-which-we-refer-to-as-smbb-for-smoothed-biomass-burning-fluxes-the-cmip6-biomass-burning-emissions-of-all-relevant-species-for-community-atmosphere-model-version-6-cam6-were-smoothed-in-time-with-an-11-year-running-mean-filter">
+   * smbb: For the second set of 50 members, which we refer to as SMBB (for smoothed biomass burning fluxes), the CMIP6 biomass burning emissions of all relevant species for Community Atmosphere Model version 6 (CAM6) were smoothed in time with an 11-year running mean filter.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rodgers-et-al-2021-https-esd-copernicus-org-articles-12-1393-2021">
+   * Rodgers et al. (2021): https://esd.copernicus.org/articles/12/1393/2021/
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fasullo-et-al-2021-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2021gl093841">
+   * Fasullo et al. (2021): https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL093841
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derepentigny-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2020jc016133">
+   * DeRepentigny et al. (2020): https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016133
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#danabasoglu-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-10-1029-2019ms001916">
+   * Danabasoglu et al. (2020): https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019MS001916
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#van-marle-et-al-2017-https-gmd-copernicus-org-articles-10-3329-2017">
+   * van Marle et al. (2017): https://gmd.copernicus.org/articles/10/3329/2017/
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oneill-et-al-2016-https-gmd-copernicus-org-articles-9-3461-2016">
+   * O’Neill et al. (2016): https://gmd.copernicus.org/articles/9/3461/2016/
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>CESM2 - LARGE ENSEMBLE (LENS2)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#by-mauricio-rocha-and-dr-gustavo-marques">
+   by Mauricio Rocha and Dr. Gustavo Marques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#before-we-begin-here-are-some-valuable-notes-about-lens2">
+   Before we begin, here are some valuable notes about LENS2:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ssp370-refers-to-the-shared-socioeconomic-pathway-ssp-and-represents-the-forced-scenario-until-the-year-of-2100-the-choice-of-the-ssp3-7-0-scenario-forcing-follows-cmip6-recommendations-oneill-et-al-2016-that-precisely-emphasize-the-value-of-this-relatively-high-forcing-level-so-as-to-quantify-changes-in-natural-variability-rodgers-et-al-2021-ssp37-0-lies-between-rcp6-0-and-rcp8-5-and-represents-the-medium-to-the-high-end-of-the-range-of-future-forcing-pathways">
+   * ssp370: refers to the Shared Socioeconomic Pathway (SSP) and represents the forced scenario until the year of 2100. The choice of the SSP3-7.0 scenario forcing follows CMIP6 recommendations (O’Neill et al., 2016) that precisely emphasize the value of this relatively high forcing level so as to quantify changes in natural variability (Rodgers et al. 2021). SSP3–7.0 lies between RCP6.0 and RCP8.5 and represents the medium to the high end of the range of future forcing pathways.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-s-rcp8-5-means-representative-concentration-pathways-for-8-5-w-m2">
+   P.S.: RCP8.5 means Representative Concentration Pathways for 8.5 W/m².
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#historical-1850-2015-not-projected-period-so-ideal-for-doing-validation-of-lens2-with-reanalysis-or-in-situ-data-because-of-its-spatial-resolution-and-temporal-extent-era5-can-be-used-to-do-this-validation-considering-the-amoc-strength-at-26-5n-as-an-example-fig-s2-in-rodgers-et-al-2021-the-ensemble-mean-amoc-strength-for-each-of-the-micro-perturbation-clusters-initialized-for-years-1231-strength-1251-decreasing-1281-increasing-and-1301-weak-of-the-preindustrial-control-run-averaged-across-20-members-for-each-case-converge-only-after-several-decades-indicative-of-the-timescale-over-which-the-initial-condition-memory-persists-for-amoc-for-this-reason-their-analysis-of-internal-variability-focuses-on-the-period-after-1960-more-than-an-entire-century-after-initialization-how-to-know-what-is-forced-variability-and-natural-variability-one-way-to-check-this-is-to-differentiate-between-members-of-the-same-experiment">
+   * historical (1850 - 2015): not projected period, so ideal for doing validation of LENS2 with reanalysis or in situ data. Because of its spatial resolution and temporal extent, ERA5 can be used to do this validation. Considering the AMOC strength at 26.5N as an example {Fig. S2 in Rodgers et al. (2021)}, the ensemble mean AMOC strength for each of the micro-perturbation clusters initialized for years 1231 (strength), 1251 (decreasing), 1281 (increasing), and 1301 (weak) of the preindustrial control run (averaged across 20 members for each case) converge only after several decades, indicative of the timescale over which the initial condition memory persists for AMOC. For this reason, their analysis of internal variability focuses on the period after 1960, more than an entire century after initialization. How to know what is forced variability and natural variability? One way to check this is to differentiate between members of the same experiment.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cmip-the-first-50-members-of-the-large-ensemble-follow-cmip6-protocols-van-marle-et-al-2017-with-biomass-burning-following-the-description-in-the-cesm2-overview-paper-danabasoglu-et-al-2020-and-this-forcing-is-referred-to-as-cmip6-rodgers-et-al-2021">
+   * cmip: The first 50 members of the large ensemble follow CMIP6 protocols (Van Marle et al., 2017), with biomass burning following the description in the CESM2 overview paper (Danabasoglu et al., 2020), and this forcing is referred to as CMIP6 (Rodgers et al. (2021)).
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#smbb-for-the-second-set-of-50-members-which-we-refer-to-as-smbb-for-smoothed-biomass-burning-fluxes-the-cmip6-biomass-burning-emissions-of-all-relevant-species-for-community-atmosphere-model-version-6-cam6-were-smoothed-in-time-with-an-11-year-running-mean-filter">
+   * smbb: For the second set of 50 members, which we refer to as SMBB (for smoothed biomass burning fluxes), the CMIP6 biomass burning emissions of all relevant species for Community Atmosphere Model version 6 (CAM6) were smoothed in time with an 11-year running mean filter.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rodgers-et-al-2021-https-esd-copernicus-org-articles-12-1393-2021">
+   * Rodgers et al. (2021): https://esd.copernicus.org/articles/12/1393/2021/
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fasullo-et-al-2021-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2021gl093841">
+   * Fasullo et al. (2021): https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL093841
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derepentigny-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2020jc016133">
+   * DeRepentigny et al. (2020): https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016133
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#danabasoglu-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-10-1029-2019ms001916">
+   * Danabasoglu et al. (2020): https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019MS001916
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#van-marle-et-al-2017-https-gmd-copernicus-org-articles-10-3329-2017">
+   * van Marle et al. (2017): https://gmd.copernicus.org/articles/10/3329/2017/
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oneill-et-al-2016-https-gmd-copernicus-org-articles-9-3461-2016">
+   * O’Neill et al. (2016): https://gmd.copernicus.org/articles/9/3461/2016/
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="cesm2-large-ensemble-lens2">
+<h1>CESM2 - LARGE ENSEMBLE (LENS2)<a class="headerlink" href="#cesm2-large-ensemble-lens2" title="Permalink to this headline">#</a></h1>
+<section id="by-mauricio-rocha-and-dr-gustavo-marques">
+<h2>by Mauricio Rocha and Dr. Gustavo Marques<a class="headerlink" href="#by-mauricio-rocha-and-dr-gustavo-marques" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="before-we-begin-here-are-some-valuable-notes-about-lens2">
+<h2>Before we begin, here are some valuable notes about LENS2:<a class="headerlink" href="#before-we-begin-here-are-some-valuable-notes-about-lens2" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="ssp370-refers-to-the-shared-socioeconomic-pathway-ssp-and-represents-the-forced-scenario-until-the-year-of-2100-the-choice-of-the-ssp3-7-0-scenario-forcing-follows-cmip6-recommendations-oneill-et-al-2016-that-precisely-emphasize-the-value-of-this-relatively-high-forcing-level-so-as-to-quantify-changes-in-natural-variability-rodgers-et-al-2021-ssp37-0-lies-between-rcp6-0-and-rcp8-5-and-represents-the-medium-to-the-high-end-of-the-range-of-future-forcing-pathways">
+<h2>* ssp370: refers to the Shared Socioeconomic Pathway (SSP) and represents the forced scenario until the year of 2100. The choice of the SSP3-7.0 scenario forcing follows CMIP6 recommendations (O’Neill et al., 2016) that precisely emphasize the value of this relatively high forcing level so as to quantify changes in natural variability (Rodgers et al. 2021). SSP3–7.0 lies between RCP6.0 and RCP8.5 and represents the medium to the high end of the range of future forcing pathways.<a class="headerlink" href="#ssp370-refers-to-the-shared-socioeconomic-pathway-ssp-and-represents-the-forced-scenario-until-the-year-of-2100-the-choice-of-the-ssp3-7-0-scenario-forcing-follows-cmip6-recommendations-oneill-et-al-2016-that-precisely-emphasize-the-value-of-this-relatively-high-forcing-level-so-as-to-quantify-changes-in-natural-variability-rodgers-et-al-2021-ssp37-0-lies-between-rcp6-0-and-rcp8-5-and-represents-the-medium-to-the-high-end-of-the-range-of-future-forcing-pathways" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="p-s-rcp8-5-means-representative-concentration-pathways-for-8-5-w-m2">
+<h2>P.S.: RCP8.5 means Representative Concentration Pathways for 8.5 W/m².<a class="headerlink" href="#p-s-rcp8-5-means-representative-concentration-pathways-for-8-5-w-m2" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="historical-1850-2015-not-projected-period-so-ideal-for-doing-validation-of-lens2-with-reanalysis-or-in-situ-data-because-of-its-spatial-resolution-and-temporal-extent-era5-can-be-used-to-do-this-validation-considering-the-amoc-strength-at-26-5n-as-an-example-fig-s2-in-rodgers-et-al-2021-the-ensemble-mean-amoc-strength-for-each-of-the-micro-perturbation-clusters-initialized-for-years-1231-strength-1251-decreasing-1281-increasing-and-1301-weak-of-the-preindustrial-control-run-averaged-across-20-members-for-each-case-converge-only-after-several-decades-indicative-of-the-timescale-over-which-the-initial-condition-memory-persists-for-amoc-for-this-reason-their-analysis-of-internal-variability-focuses-on-the-period-after-1960-more-than-an-entire-century-after-initialization-how-to-know-what-is-forced-variability-and-natural-variability-one-way-to-check-this-is-to-differentiate-between-members-of-the-same-experiment">
+<h2>* historical (1850 - 2015): not projected period, so ideal for doing validation of LENS2 with reanalysis or in situ data. Because of its spatial resolution and temporal extent, ERA5 can be used to do this validation. Considering the AMOC strength at 26.5N as an example {Fig. S2 in Rodgers et al. (2021)}, the ensemble mean AMOC strength for each of the micro-perturbation clusters initialized for years 1231 (strength), 1251 (decreasing), 1281 (increasing), and 1301 (weak) of the preindustrial control run (averaged across 20 members for each case) converge only after several decades, indicative of the timescale over which the initial condition memory persists for AMOC. For this reason, their analysis of internal variability focuses on the period after 1960, more than an entire century after initialization. How to know what is forced variability and natural variability? One way to check this is to differentiate between members of the same experiment.<a class="headerlink" href="#historical-1850-2015-not-projected-period-so-ideal-for-doing-validation-of-lens2-with-reanalysis-or-in-situ-data-because-of-its-spatial-resolution-and-temporal-extent-era5-can-be-used-to-do-this-validation-considering-the-amoc-strength-at-26-5n-as-an-example-fig-s2-in-rodgers-et-al-2021-the-ensemble-mean-amoc-strength-for-each-of-the-micro-perturbation-clusters-initialized-for-years-1231-strength-1251-decreasing-1281-increasing-and-1301-weak-of-the-preindustrial-control-run-averaged-across-20-members-for-each-case-converge-only-after-several-decades-indicative-of-the-timescale-over-which-the-initial-condition-memory-persists-for-amoc-for-this-reason-their-analysis-of-internal-variability-focuses-on-the-period-after-1960-more-than-an-entire-century-after-initialization-how-to-know-what-is-forced-variability-and-natural-variability-one-way-to-check-this-is-to-differentiate-between-members-of-the-same-experiment" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="cmip-the-first-50-members-of-the-large-ensemble-follow-cmip6-protocols-van-marle-et-al-2017-with-biomass-burning-following-the-description-in-the-cesm2-overview-paper-danabasoglu-et-al-2020-and-this-forcing-is-referred-to-as-cmip6-rodgers-et-al-2021">
+<h2>* cmip: The first 50 members of the large ensemble follow CMIP6 protocols (Van Marle et al., 2017), with biomass burning following the description in the CESM2 overview paper (Danabasoglu et al., 2020), and this forcing is referred to as CMIP6 (Rodgers et al. (2021)).<a class="headerlink" href="#cmip-the-first-50-members-of-the-large-ensemble-follow-cmip6-protocols-van-marle-et-al-2017-with-biomass-burning-following-the-description-in-the-cesm2-overview-paper-danabasoglu-et-al-2020-and-this-forcing-is-referred-to-as-cmip6-rodgers-et-al-2021" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="smbb-for-the-second-set-of-50-members-which-we-refer-to-as-smbb-for-smoothed-biomass-burning-fluxes-the-cmip6-biomass-burning-emissions-of-all-relevant-species-for-community-atmosphere-model-version-6-cam6-were-smoothed-in-time-with-an-11-year-running-mean-filter">
+<h2>* smbb: For the second set of 50 members, which we refer to as SMBB (for smoothed biomass burning fluxes), the CMIP6 biomass burning emissions of all relevant species for Community Atmosphere Model version 6 (CAM6) were smoothed in time with an 11-year running mean filter.<a class="headerlink" href="#smbb-for-the-second-set-of-50-members-which-we-refer-to-as-smbb-for-smoothed-biomass-burning-fluxes-the-cmip6-biomass-burning-emissions-of-all-relevant-species-for-community-atmosphere-model-version-6-cam6-were-smoothed-in-time-with-an-11-year-running-mean-filter" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="references">
+<h2>References:<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="rodgers-et-al-2021-https-esd-copernicus-org-articles-12-1393-2021">
+<h2>* Rodgers et al. (2021): <a class="reference external" href="https://esd.copernicus.org/articles/12/1393/2021/">https://esd.copernicus.org/articles/12/1393/2021/</a><a class="headerlink" href="#rodgers-et-al-2021-https-esd-copernicus-org-articles-12-1393-2021" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="fasullo-et-al-2021-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2021gl093841">
+<h2>* Fasullo et al. (2021): <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL093841">https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL093841</a><a class="headerlink" href="#fasullo-et-al-2021-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2021gl093841" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="derepentigny-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2020jc016133">
+<h2>* DeRepentigny et al. (2020): <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016133">https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016133</a><a class="headerlink" href="#derepentigny-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2020jc016133" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="danabasoglu-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-10-1029-2019ms001916">
+<h2>* Danabasoglu et al. (2020): <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019MS001916">https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019MS001916</a><a class="headerlink" href="#danabasoglu-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-10-1029-2019ms001916" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="van-marle-et-al-2017-https-gmd-copernicus-org-articles-10-3329-2017">
+<h2>* van Marle et al. (2017): <a class="reference external" href="https://gmd.copernicus.org/articles/10/3329/2017/">https://gmd.copernicus.org/articles/10/3329/2017/</a><a class="headerlink" href="#van-marle-et-al-2017-https-gmd-copernicus-org-articles-10-3329-2017" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="oneill-et-al-2016-https-gmd-copernicus-org-articles-9-3461-2016">
+<h2>* O’Neill et al. (2016): <a class="reference external" href="https://gmd.copernicus.org/articles/9/3461/2016/">https://gmd.copernicus.org/articles/9/3461/2016/</a><a class="headerlink" href="#oneill-et-al-2016-https-gmd-copernicus-org-articles-9-3461-2016" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-env-conda-npl-py"
+        },
+        kernelOptions: {
+            kernelName: "conda-env-conda-npl-py",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-env-conda-npl-py'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Notebook_Template.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Sample Notebook</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Notebook_South_Atlantic_Area.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">CESM2 - LARGE ENSEMBLE (LENS2)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By NCAR ESDS Team<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

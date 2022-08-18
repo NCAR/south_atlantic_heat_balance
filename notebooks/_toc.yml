@@ -2,3 +2,7 @@ format: jb-book
 root: intro
 chapters:
 - file:  Notebook_Template
+- file:  Notebook_Notes
+- file:  Notebook_South_Atlantic_Area
+
+

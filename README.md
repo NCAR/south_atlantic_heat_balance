@@ -40,7 +40,6 @@ Clone this repository to your account, then create your own branch to work in
 "conda env create -f envs/environment.yml"
 "conda activate environment_name"
 
-
 ```
 
 ## The importance of software citation and minting a DOI

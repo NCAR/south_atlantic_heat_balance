@@ -4,9 +4,11 @@ chapters:
 - file:  Notebook_Template
 - file:  Notebook_Notes
 - file:  Notebook_South_Atlantic_Area
-- file:  Notebook_South_Atlantic_Surface_Analyses
+- file:  Notebook_South_Atlantic_Surface_Analyses_ocn_comp
+- file:  Notebook_South_Atlantic_Surface_Analyses_atm_comp
 - file:  Notebook_lens2_MOCz_maxima
 - file:  Notebook_lens2_MOCsig2_1deg
+- file:  Notebook_lens2_MOC_upper_branch
 
 
 

@@ -1,0 +1,1692 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>CESM2 - LARGE ENSEMBLE (LENS2) &#8212; Analysis Project Template</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CESM2 - LARGE ENSEMBLE (LENS2)" href="Notebook_lens2_historical_MOC_upper_branch.html" />
+    <link rel="prev" title="CESM2 - LARGE ENSEMBLE (LENS2)" href="Notebook_lens2_ssp370_MOCz_maxima.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Analysis Project Template</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_Template.html">
+   Sample Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_Notes.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_South_Atlantic_Area.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_South_Atlantic_Surface_Analyses_ocn_comp_historical.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_South_Atlantic_Surface_Analyses_ocn_comp_ssp370.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_South_Atlantic_Surface_Analyses_atm_comp_historical.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_South_Atlantic_Surface_Analyses_atm_comp_ssp370.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_lens2_historical_MOCz_maxima.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_lens2_ssp370_MOCz_maxima.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_lens2_historical_MOC_upper_branch.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_lens2_ssp370_MOC_upper_branch.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_South_Atlantic_plots_temporal_series_historical.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_ascii_netcdf.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_North_Atlantic_XMXL_hovmoller_diagrams_historical.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Notebook_lens2_MOCsig2_1deg.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Notebook_lens2_MOCsig2_1deg.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#by-mauricio-rocha-and-dr-gustavo-marques">
+   by Mauricio Rocha and Dr. Gustavo Marques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports">
+   Imports
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#improve-the-workflow-using-clusters">
+   Improve the workflow using clusters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#read-in-ogcm-history-file-moc-template-file">
+   Read in OGCM history file &amp; MOC template file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-sigma-2-field-from-lens2-dataset">
+   Compute sigma-2 field from LENS2 dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#salinity">
+   Salinity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#temperature">
+   Temperature
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zonal-velocity">
+   Zonal velocity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#meridional-velocity">
+   Meridional Velocity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submeso-velocity-in-grid-x-direction-diagnostic">
+   Submeso velocity in grid-x direction (diagnostic)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submeso-velocity-in-grid-y-direction-diagnostic">
+   Submeso velocity in grid-y direction (diagnostic)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bolus-velocity-in-grid-x-direction-diagnostic">
+   Bolus Velocity in grid-x direction (diagnostic)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bolus-velocity-in-grid-y-direction-diagnostic">
+   Bolus Velocity in grid-y direction (diagnostic)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-sigma-2-field-from-pop-model-output">
+   2. Compute sigma-2 field from POP model output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-target-sigma-2-vertical-grid">
+   3. Define target sigma-2 vertical grid
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-a-predefined-target-grid-or-create-your-own">
+     * Use a predefined target grid, or create your own!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-isopycnal-layer-thickness">
+   4. Compute Isopycnal Layer Thickness
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-isopycnal-layer-depth">
+   5. Compute Isopycnal Layer Depth
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-isopycnal-layer-horizontal-volume-flux">
+   6. Compute Isopycnal Layer Horizontal Volume Flux
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-above-large-differences-appear-to-be-associated-with-the-nordic-sea-overflow-parameterization-i-m-not-sure-how-to-handle-overflow-velocities-in-the-moc-computation">
+     The above large differences appear to be associated with the Nordic Sea overflow parameterization. I’m not sure how to handle overflow velocities in the MOC computation:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-vertical-volume-flux-from-horizontal-flux-convergence">
+   7. Compute Vertical Volume Flux from horizontal flux convergence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-moc-region-masks">
+   8. Define MOC region masks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-moc">
+   9. Compute MOC
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-southern-boundary-fluxes-for-atlantic-region">
+   10. Add Southern Boundary Fluxes for Atlantic Region
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save-to-netcdf">
+   11. Save to netcdf
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-k-index-array">
+   Define k-index array
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#define-sigma2-t">
+     Define sigma2_T
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Define target sigma-2 vertical grid
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-moc-sigma2-using-xhistogram">
+   Compute MOC(Sigma2) using xhistogram
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     1. Compute Isopycnal Layer Thickness
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     2. Compute Isopycnal Layer Depth
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     3. Compute Isopycnal Layer Horizontal Volume Flux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compute-vertical-volume-flux-using-model-divergence-operator">
+     4. Compute Vertical Volume Flux using model divergence operator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compute-zonal-sums-of-vertical-volume-flux-in-latitude-strips">
+     5. Compute Zonal Sums of Vertical Volume Flux in latitude strips
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compute-cumulative-meridional-integral-of-zonally-summed-wflux">
+     6. Compute cumulative meridional integral of zonally-summed wflux
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>CESM2 - LARGE ENSEMBLE (LENS2)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#by-mauricio-rocha-and-dr-gustavo-marques">
+   by Mauricio Rocha and Dr. Gustavo Marques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports">
+   Imports
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#improve-the-workflow-using-clusters">
+   Improve the workflow using clusters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#read-in-ogcm-history-file-moc-template-file">
+   Read in OGCM history file &amp; MOC template file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-sigma-2-field-from-lens2-dataset">
+   Compute sigma-2 field from LENS2 dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#salinity">
+   Salinity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#temperature">
+   Temperature
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zonal-velocity">
+   Zonal velocity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#meridional-velocity">
+   Meridional Velocity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submeso-velocity-in-grid-x-direction-diagnostic">
+   Submeso velocity in grid-x direction (diagnostic)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submeso-velocity-in-grid-y-direction-diagnostic">
+   Submeso velocity in grid-y direction (diagnostic)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bolus-velocity-in-grid-x-direction-diagnostic">
+   Bolus Velocity in grid-x direction (diagnostic)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bolus-velocity-in-grid-y-direction-diagnostic">
+   Bolus Velocity in grid-y direction (diagnostic)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-sigma-2-field-from-pop-model-output">
+   2. Compute sigma-2 field from POP model output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-target-sigma-2-vertical-grid">
+   3. Define target sigma-2 vertical grid
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-a-predefined-target-grid-or-create-your-own">
+     * Use a predefined target grid, or create your own!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-isopycnal-layer-thickness">
+   4. Compute Isopycnal Layer Thickness
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-isopycnal-layer-depth">
+   5. Compute Isopycnal Layer Depth
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-isopycnal-layer-horizontal-volume-flux">
+   6. Compute Isopycnal Layer Horizontal Volume Flux
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-above-large-differences-appear-to-be-associated-with-the-nordic-sea-overflow-parameterization-i-m-not-sure-how-to-handle-overflow-velocities-in-the-moc-computation">
+     The above large differences appear to be associated with the Nordic Sea overflow parameterization. I’m not sure how to handle overflow velocities in the MOC computation:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-vertical-volume-flux-from-horizontal-flux-convergence">
+   7. Compute Vertical Volume Flux from horizontal flux convergence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-moc-region-masks">
+   8. Define MOC region masks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-moc">
+   9. Compute MOC
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-southern-boundary-fluxes-for-atlantic-region">
+   10. Add Southern Boundary Fluxes for Atlantic Region
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save-to-netcdf">
+   11. Save to netcdf
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-k-index-array">
+   Define k-index array
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#define-sigma2-t">
+     Define sigma2_T
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Define target sigma-2 vertical grid
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-moc-sigma2-using-xhistogram">
+   Compute MOC(Sigma2) using xhistogram
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     1. Compute Isopycnal Layer Thickness
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     2. Compute Isopycnal Layer Depth
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     3. Compute Isopycnal Layer Horizontal Volume Flux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compute-vertical-volume-flux-using-model-divergence-operator">
+     4. Compute Vertical Volume Flux using model divergence operator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compute-zonal-sums-of-vertical-volume-flux-in-latitude-strips">
+     5. Compute Zonal Sums of Vertical Volume Flux in latitude strips
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compute-cumulative-meridional-integral-of-zonally-summed-wflux">
+     6. Compute cumulative meridional integral of zonally-summed wflux
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="cesm2-large-ensemble-lens2">
+<h1>CESM2 - LARGE ENSEMBLE (LENS2)<a class="headerlink" href="#cesm2-large-ensemble-lens2" title="Permalink to this headline">#</a></h1>
+<section id="by-mauricio-rocha-and-dr-gustavo-marques">
+<h2>by Mauricio Rocha and Dr. Gustavo Marques<a class="headerlink" href="#by-mauricio-rocha-and-dr-gustavo-marques" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>The goal of this notebook is to calculate the MOC in density coordinates. We used <a class="reference external" href="https://github.com/sgyeager/POP_MOC">https://github.com/sgyeager/POP_MOC</a> as reference; thus, We thank Dr. Stephen Yeager. We also thank Michael Levy for the technical support.</p></li>
+<li><p>P.S.: The Notebook is incomplete as we are adapting it to compute the MOC from all its components.</p></li>
+</ul>
+</section>
+<section id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  
+<span class="kn">import</span> <span class="nn">cftime</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">signal</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">dask</span>
+<span class="kn">import</span> <span class="nn">cf_xarray</span>
+<span class="kn">import</span> <span class="nn">intake</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+<span class="kn">import</span> <span class="nn">intake_esm</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">xhistogram.xarray</span> <span class="kn">import</span> <span class="n">histogram</span>
+<span class="kn">import</span> <span class="nn">pop_tools</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">from</span> <span class="nn">MOCutils</span> <span class="kn">import</span> <span class="n">popmoc</span>
+<span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span> <span class="nn">ncar_jobqueue</span> <span class="kn">import</span> <span class="n">NCARCluster</span><span class="c1">#,PBSCluster</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="improve-the-workflow-using-clusters">
+<h2>Improve the workflow using clusters<a class="headerlink" href="#improve-the-workflow-using-clusters" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mem_per_worker</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># in GB more memory here maybe 100 GB</span>
+<span class="n">num_workers</span> <span class="o">=</span> <span class="mi">45</span> <span class="c1"># more workers maybe 45</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">(</span><span class="n">cores</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">mem_per_worker</span><span class="si">}</span><span class="s1"> GB&#39;</span><span class="p">,</span><span class="n">resource_spec</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;select=1:ncpus=1:mem=</span><span class="si">{</span><span class="n">mem_per_worker</span><span class="si">}</span><span class="s1">GB&#39;</span><span class="p">)</span>
+<span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">num_workers</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
+<span class="n">client</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="read-in-ogcm-history-file-moc-template-file">
+<h2>Read in OGCM history file &amp; MOC template file<a class="headerlink" href="#read-in-ogcm-history-file-moc-template-file" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fmoc</span> <span class="o">=</span> <span class="s1">&#39;/glade/u/home/yeager/analysis/python/POP_MOC/moc_template.nc&#39;</span>
+<span class="n">ds_moctemp</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">fmoc</span><span class="p">)</span> <span class="c1"># MOC template</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open original collection description file</span>
+<span class="n">cat_url</span><span class="o">=</span><span class="s1">&#39;/glade/collections/cmip/catalog/intake-esm-datastore/catalogs/glade-cesm2-le.json&#39;</span>
+<span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span><span class="n">cat_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Catolog</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Catalog file:&#39;</span><span class="p">,</span> <span class="n">col</span><span class="o">.</span><span class="n">esmcol_data</span><span class="p">[</span><span class="s1">&#39;catalog_file&#39;</span><span class="p">])</span>
+<span class="n">col</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uniques_orig</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;component&#39;</span><span class="p">,</span> <span class="s1">&#39;frequency&#39;</span><span class="p">,</span> <span class="s1">&#39;experiment&#39;</span><span class="p">,</span> <span class="s1">&#39;variable&#39;</span><span class="p">])</span>
+<span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">uniques_orig</span><span class="p">,</span> <span class="n">compact</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Some variables like temperature, salinity, are not available for annual frequency, so we chose the monthly frequency.</span>
+<span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="s2">&quot;ocn&quot;</span><span class="p">,</span> <span class="n">variable</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;TEMP&quot;</span><span class="p">,</span><span class="s2">&quot;SALT&quot;</span><span class="p">,</span><span class="s2">&quot;UVEL&quot;</span><span class="p">,</span><span class="s2">&quot;VVEL&quot;</span><span class="p">],</span> <span class="n">frequency</span><span class="o">=</span><span class="s2">&quot;month_1&quot;</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="s2">&quot;historical&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">cat_subset</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="s1">&#39;ocn&#39;</span><span class="p">,</span> <span class="c1"># Ocean component</span>
+                            <span class="n">variable</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;TEMP&#39;</span><span class="p">,</span><span class="s1">&#39;SALT&#39;</span><span class="p">,</span><span class="s1">&#39;UVEL&#39;</span><span class="p">,</span><span class="s1">&#39;VVEL&#39;</span><span class="p">,</span><span class="s1">&#39;UISOP&#39;</span><span class="p">,</span><span class="s1">&#39;USUBM&#39;</span><span class="p">,</span><span class="s1">&#39;VISOP&#39;</span><span class="p">,</span><span class="s1">&#39;VSUBM&#39;</span><span class="p">],</span> <span class="c1"># Temperature, Salinity, Zonal Velocity, Meridional Velocity</span>
+                            <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;month_1&#39;</span><span class="p">,</span> <span class="c1"># Monthly</span>
+                            <span class="n">experiment</span><span class="o">=</span><span class="s1">&#39;historical&#39;</span><span class="p">)</span> <span class="c1"># 1850-2014</span>
+<span class="c1">#                            forcing_variant=&#39;smbb&#39;, # You can use smbb or cmip6</span>
+<span class="c1">#                       )</span>
+<span class="n">dset_dict_raw</span> <span class="o">=</span> <span class="n">cat_subset</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span><span class="n">zarr_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;consolidated&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span> <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;anon&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Dataset dictionary keys:</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">dset_dict_raw</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compute-sigma-2-field-from-lens2-dataset">
+<h2>Compute sigma-2 field from LENS2 dataset<a class="headerlink" href="#compute-sigma-2-field-from-lens2-dataset" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tslice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="s2">&quot;1960-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2014-12-31&quot;</span><span class="p">)</span> <span class="c1"># select the period you wish</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="salinity">
+<h2>Salinity<a class="headerlink" href="#salinity" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">ds_smbb_salt</span> <span class="o">=</span> <span class="n">dset_dict_raw</span><span class="p">[</span><span class="s1">&#39;ocn.historical.pop.h.smbb.SALT&#39;</span><span class="p">]</span> <span class="c1"># Salinity</span>
+<span class="c1">#ds_cmip6_salt = dset_dict_raw[&#39;ocn.historical.pop.h.cmip6.SALT&#39;] # Salinity</span>
+<span class="c1">#ds_salt = xr.concat([ds_cmip6_salt,ds_smbb_salt], dim=&#39;member_id&#39;,data_vars=&#39;minimal&#39;,coords=&#39;minimal&#39;,compat=&#39;override&#39;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Salinty before: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">ds_smbb_salt</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">ds_salt</span> <span class="o">=</span> <span class="n">ds_smbb_salt</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">tslice</span><span class="p">)</span>
+<span class="n">ds_salt</span> <span class="o">=</span> <span class="n">ds_salt</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;1Y&#39;</span><span class="p">,</span> <span class="n">closed</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span> <span class="c1"># Yearly average</span>
+<span class="n">salt</span> <span class="o">=</span> <span class="n">ds_salt</span><span class="p">[</span><span class="s1">&#39;SALT&#39;</span><span class="p">]</span>
+<span class="n">salt</span> <span class="o">=</span> <span class="n">salt</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;member_id&quot;</span><span class="p">])</span> <span class="c1"># Average of all members</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Salinty after: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">salt</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">salt</span> <span class="o">=</span> <span class="n">salt</span><span class="o">.</span><span class="n">load</span><span class="p">()</span> <span class="c1"># Necessary because pop-tools.eos() doesn&#39;t play nicely with dask</span>
+<span class="k">del</span> <span class="n">ds_salt</span><span class="p">,</span> <span class="n">ds_smbb_salt</span><span class="c1">#, ds_cmip6_salt</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="temperature">
+<h2>Temperature<a class="headerlink" href="#temperature" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">ds_smbb_temp</span> <span class="o">=</span> <span class="n">dset_dict_raw</span><span class="p">[</span><span class="s1">&#39;ocn.historical.pop.h.smbb.TEMP&#39;</span><span class="p">]</span> <span class="c1"># Temperature</span>
+<span class="c1">#ds_cmip6_temp = dset_dict_raw[&#39;ocn.historical.pop.h.cmip6.TEMP&#39;] # Temperature</span>
+<span class="c1">#ds_temp = xr.concat([ds_cmip6_temp,ds_smbb_temp], dim=&#39;member_id&#39;,data_vars=&#39;minimal&#39;,coords=&#39;minimal&#39;,compat=&#39;override&#39;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Temperature before: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">ds_smbb_temp</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">ds_temp</span> <span class="o">=</span> <span class="n">ds_smbb_temp</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">tslice</span><span class="p">)</span>
+<span class="n">ds_temp</span> <span class="o">=</span> <span class="n">ds_temp</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;1Y&#39;</span><span class="p">,</span> <span class="n">closed</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span> <span class="c1"># Yearly average</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">ds_temp</span><span class="p">[</span><span class="s1">&#39;TEMP&#39;</span><span class="p">]</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;member_id&#39;</span><span class="p">])</span> <span class="c1"># Average of all members</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Temperature after: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">temp</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">load</span><span class="p">()</span> <span class="c1"># Necessary because pop-tools.eos() doesn&#39;t play nicely with dask</span>
+<span class="k">del</span> <span class="n">ds_smbb_temp</span><span class="c1">#, ds_cmip6_temp</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="zonal-velocity">
+<h2>Zonal velocity<a class="headerlink" href="#zonal-velocity" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">ds_smbb_uvel</span> <span class="o">=</span> <span class="n">dset_dict_raw</span><span class="p">[</span><span class="s1">&#39;ocn.historical.pop.h.smbb.UVEL&#39;</span><span class="p">]</span> <span class="c1">#  Zonal velocity</span>
+<span class="c1">#ds_cmip6_uvel = dset_dict_raw[&#39;ocn.historical.pop.h.cmip6.UVEL&#39;] #  Zonal velocity</span>
+<span class="c1">#ds_uvel = xr.concat([ds_cmip6_uvel,ds_smbb_uvel], dim=&#39;member_id&#39;,data_vars=&#39;minimal&#39;,coords=&#39;minimal&#39;,compat=&#39;override&#39;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Zonal Velocity before: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">ds_smbb_uvel</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">ds_uvel</span> <span class="o">=</span> <span class="n">ds_smbb_uvel</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">tslice</span><span class="p">)</span>
+<span class="n">ds_uvel</span> <span class="o">=</span> <span class="n">ds_uvel</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;1Y&#39;</span><span class="p">,</span> <span class="n">closed</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span> <span class="c1"># Yearly average</span>
+<span class="n">uvel</span> <span class="o">=</span> <span class="n">ds_uvel</span><span class="p">[</span><span class="s1">&#39;UVEL&#39;</span><span class="p">]</span>
+<span class="n">uvel</span> <span class="o">=</span> <span class="n">uvel</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;member_id&#39;</span><span class="p">])</span> <span class="c1"># Average of all members</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Zonal Velocity before: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">uvel</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">uvel</span> <span class="o">=</span> <span class="n">uvel</span><span class="o">.</span><span class="n">load</span><span class="p">()</span> <span class="c1"># Necessary because pop-tools.eos() doesn&#39;t play nicely with dask</span>
+<span class="k">del</span> <span class="n">ds_smbb_uvel</span><span class="c1">#, ds_cmip6_uvel</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="meridional-velocity">
+<h2>Meridional Velocity<a class="headerlink" href="#meridional-velocity" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">ds_smbb_vvel</span> <span class="o">=</span> <span class="n">dset_dict_raw</span><span class="p">[</span><span class="s1">&#39;ocn.historical.pop.h.smbb.VVEL&#39;</span><span class="p">]</span> <span class="c1"># meridional velocity</span>
+<span class="c1">#ds_cmip6_vvel = dset_dict_raw[&#39;ocn.historical.pop.h.cmip6.VVEL&#39;] # meridional velocity</span>
+<span class="c1">#ds_vvel = xr.concat([ds_cmip6_vvel,ds_smbb_vvel], dim=&#39;member_id&#39;,data_vars=&#39;minimal&#39;,coords=&#39;minimal&#39;,compat=&#39;override&#39;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Meridional Velocity before: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">ds_smbb_vvel</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ds_vvel</span> <span class="o">=</span> <span class="n">ds_smbb_vvel</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">tslice</span><span class="p">)</span>
+<span class="n">ds_vvel</span> <span class="o">=</span> <span class="n">ds_vvel</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;1Y&#39;</span><span class="p">,</span> <span class="n">closed</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span> <span class="c1"># Yearly average</span>
+<span class="n">vvel</span> <span class="o">=</span> <span class="n">ds_vvel</span><span class="p">[</span><span class="s1">&#39;VVEL&#39;</span><span class="p">]</span>
+<span class="n">vvel</span> <span class="o">=</span> <span class="n">vvel</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;member_id&#39;</span><span class="p">])</span> <span class="c1"># Average of all members</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Zonal Velocity before: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">vvel</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">vvel</span> <span class="o">=</span> <span class="n">vvel</span><span class="o">.</span><span class="n">load</span><span class="p">()</span> <span class="c1"># Necessary because pop-tools.eos() doesn&#39;t play nicely with dask</span>
+<span class="k">del</span> <span class="n">ds_smbb_vvel</span><span class="c1">#, ds_cmip6_vvel</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="submeso-velocity-in-grid-x-direction-diagnostic">
+<h2>Submeso velocity in grid-x direction (diagnostic)<a class="headerlink" href="#submeso-velocity-in-grid-x-direction-diagnostic" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">ds_smbb_usubm</span> <span class="o">=</span> <span class="n">dset_dict_raw</span><span class="p">[</span><span class="s1">&#39;ocn.historical.pop.h.smbb.USUBM&#39;</span><span class="p">]</span> <span class="c1"># meridional velocity</span>
+<span class="c1">#ds_cmip6_usubm = dset_dict_raw[&#39;ocn.historical.pop.h.cmip6.USUBM&#39;] # meridional velocity</span>
+<span class="c1">#ds_usubm = xr.concat([ds_cmip6_usubm,ds_smbb_usubm], dim=&#39;member_id&#39;,data_vars=&#39;minimal&#39;,coords=&#39;minimal&#39;,compat=&#39;override&#39;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Zonal Submeso Velocity before: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">ds_smbb_usubm</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ds_usubm</span> <span class="o">=</span> <span class="n">ds_smbb_usubm</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">tslice</span><span class="p">)</span>
+<span class="n">ds_usubm</span> <span class="o">=</span> <span class="n">ds_usubm</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;1Y&#39;</span><span class="p">,</span> <span class="n">closed</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span> <span class="c1"># Yearly average</span>
+<span class="n">usubm</span> <span class="o">=</span> <span class="n">ds_usubm</span><span class="p">[</span><span class="s1">&#39;USUBM&#39;</span><span class="p">]</span>
+<span class="n">usubm</span> <span class="o">=</span> <span class="n">usubm</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;member_id&#39;</span><span class="p">])</span> <span class="c1"># Average of all members</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Zonal Velocity before: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">usubm</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">usubm</span> <span class="o">=</span> <span class="n">usubm</span><span class="o">.</span><span class="n">load</span><span class="p">()</span> <span class="c1"># Necessary because pop-tools.eos() doesn&#39;t play nicely with dask</span>
+<span class="k">del</span> <span class="n">ds_smbb_usubm</span><span class="c1">#, ds_cmip6_usubm</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="submeso-velocity-in-grid-y-direction-diagnostic">
+<h2>Submeso velocity in grid-y direction (diagnostic)<a class="headerlink" href="#submeso-velocity-in-grid-y-direction-diagnostic" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span> 
+<span class="n">ds_smbb_vsubm</span> <span class="o">=</span> <span class="n">dset_dict_raw</span><span class="p">[</span><span class="s1">&#39;ocn.historical.pop.h.smbb.VSUBM&#39;</span><span class="p">]</span> <span class="c1"># meridional velocity</span>
+<span class="c1">#ds_cmip6_vsubm = dset_dict_raw[&#39;ocn.historical.pop.h.cmip6.VSUBM&#39;] # meridional velocity</span>
+<span class="c1">#ds_vsubm = xr.concat([ds_cmip6_vsubm,ds_smbb_vsubm], dim=&#39;member_id&#39;,data_vars=&#39;minimal&#39;,coords=&#39;minimal&#39;,compat=&#39;override&#39;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Meridional Submeso Velocity before: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">ds_smbb_vsubm</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ds_vsubm</span> <span class="o">=</span> <span class="n">ds_smbb_vsubm</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">tslice</span><span class="p">)</span>
+<span class="n">ds_vsubm</span> <span class="o">=</span> <span class="n">ds_vsubm</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;1Y&#39;</span><span class="p">,</span> <span class="n">closed</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span> <span class="c1"># Yearly average</span>
+<span class="n">vsubm</span> <span class="o">=</span> <span class="n">ds_vsubm</span><span class="p">[</span><span class="s1">&#39;VSUBM&#39;</span><span class="p">]</span>
+<span class="n">vsubm</span> <span class="o">=</span> <span class="n">vsubm</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;member_id&#39;</span><span class="p">])</span> <span class="c1"># Average of all members</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Zonal Velocity before: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">vsubm</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">vsubm</span> <span class="o">=</span> <span class="n">vsubm</span><span class="o">.</span><span class="n">load</span><span class="p">()</span> <span class="c1"># Necessary because pop-tools.eos() doesn&#39;t play nicely with dask</span>
+<span class="k">del</span> <span class="n">ds_smbb_vsubm</span><span class="c1">#, ds_cmip6_vsubm</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="bolus-velocity-in-grid-x-direction-diagnostic">
+<h2>Bolus Velocity in grid-x direction (diagnostic)<a class="headerlink" href="#bolus-velocity-in-grid-x-direction-diagnostic" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">ds_smbb_uisop</span> <span class="o">=</span> <span class="n">dset_dict_raw</span><span class="p">[</span><span class="s1">&#39;ocn.historical.pop.h.smbb.UISOP&#39;</span><span class="p">]</span> <span class="c1"># meridional velocity</span>
+<span class="c1">#ds_cmip6_uisop = dset_dict_raw[&#39;ocn.historical.pop.h.cmip6.UISOP&#39;] # meridional velocity</span>
+<span class="c1">#ds_uisop = xr.concat([ds_cmip6_uisop,ds_smbb_uisop], dim=&#39;member_id&#39;,data_vars=&#39;minimal&#39;,coords=&#39;minimal&#39;,compat=&#39;override&#39;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Meridional Submeso Velocity before: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">ds_smbb_uisop</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ds_uisop</span> <span class="o">=</span> <span class="n">ds_smbb_uisop</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">tslice</span><span class="p">)</span>
+<span class="n">ds_uisop</span> <span class="o">=</span> <span class="n">ds_uisop</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;1Y&#39;</span><span class="p">,</span> <span class="n">closed</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span> <span class="c1"># Yearly average</span>
+<span class="n">uisop</span> <span class="o">=</span> <span class="n">ds_uisop</span><span class="p">[</span><span class="s1">&#39;UISOP&#39;</span><span class="p">]</span>
+<span class="n">uisop</span> <span class="o">=</span> <span class="n">uisop</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;member_id&#39;</span><span class="p">])</span> <span class="c1"># Average of all members</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Zonal Velocity before: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">uisop</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">uisop</span> <span class="o">=</span> <span class="n">uisop</span><span class="o">.</span><span class="n">load</span><span class="p">()</span> <span class="c1"># Necessary because pop-tools.eos() doesn&#39;t play nicely with dask</span>
+<span class="k">del</span> <span class="n">ds_smbb_uisop</span><span class="c1">#, ds_cmip6_uisop</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="bolus-velocity-in-grid-y-direction-diagnostic">
+<h2>Bolus Velocity in grid-y direction (diagnostic)<a class="headerlink" href="#bolus-velocity-in-grid-y-direction-diagnostic" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">ds_smbb_visop</span> <span class="o">=</span> <span class="n">dset_dict_raw</span><span class="p">[</span><span class="s1">&#39;ocn.historical.pop.h.smbb.VISOP&#39;</span><span class="p">]</span> <span class="c1"># meridional velocity</span>
+<span class="c1">#ds_cmip6_visop = dset_dict_raw[&#39;ocn.historical.pop.h.cmip6.VISOP&#39;] # meridional velocity</span>
+<span class="c1">#ds_visop = xr.concat([ds_cmip6_visop,ds_smbb_visop], dim=&#39;member_id&#39;,data_vars=&#39;minimal&#39;,coords=&#39;minimal&#39;,compat=&#39;override&#39;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Meridional Submeso Velocity before: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">ds_smbb_visop</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ds_visop</span> <span class="o">=</span> <span class="n">ds_smbb_visop</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">tslice</span><span class="p">)</span>
+<span class="n">ds_visop</span> <span class="o">=</span> <span class="n">ds_visop</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;1Y&#39;</span><span class="p">,</span> <span class="n">closed</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span> <span class="c1"># Yearly average</span>
+<span class="n">visop</span> <span class="o">=</span> <span class="n">ds_visop</span><span class="p">[</span><span class="s1">&#39;VISOP&#39;</span><span class="p">]</span>
+<span class="n">visop</span> <span class="o">=</span> <span class="n">visop</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;member_id&#39;</span><span class="p">])</span> <span class="c1"># Average of all members</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Zonal Velocity before: </span><span class="si">{</span><span class="n">dask</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">visop</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">visop</span> <span class="o">=</span> <span class="n">visop</span><span class="o">.</span><span class="n">load</span><span class="p">()</span> <span class="c1"># Necessary because pop-tools.eos() doesn&#39;t play nicely with dask</span>
+<span class="k">del</span> <span class="n">ds_smbb_visop</span><span class="c1">#, ds_cmip6_visop</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compute-sigma-2-field-from-pop-model-output">
+<h2>2. Compute sigma-2 field from POP model output<a class="headerlink" href="#compute-sigma-2-field-from-pop-model-output" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">refz</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">refdep</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">salt</span><span class="p">,</span><span class="n">refz</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;REFDEP&#39;</span><span class="p">)</span>
+
+<span class="c1"># Sigma2 on model TLAT, TLONG</span>
+<span class="n">sigma2_T</span> <span class="o">=</span> <span class="n">pop_tools</span><span class="o">.</span><span class="n">eos</span><span class="p">(</span><span class="n">salt</span><span class="o">=</span><span class="n">salt</span><span class="p">,</span><span class="n">temp</span><span class="o">=</span><span class="n">temp</span><span class="p">,</span><span class="n">depth</span><span class="o">=</span><span class="n">refdep</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1000</span>
+<span class="n">sigma2_T</span> <span class="o">=</span> <span class="n">sigma2_T</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span><span class="s1">&#39;Sigma referenced to </span><span class="si">{}</span><span class="s1">m&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">refz</span><span class="p">),</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;kg/m^3&#39;</span><span class="p">})</span>
+
+<span class="c1">## Following may be needed for some CESM2 LENS output (simulations run in Korea):</span>
+<span class="c1">#dims = np.shape(temp)</span>
+<span class="c1">#nt = dims[0]</span>
+<span class="c1">#nz = dims[1]</span>
+<span class="c1">#ny = dims[2]</span>
+<span class="c1">#nx = dims[3]</span>
+<span class="c1">#kji = np.indices((nz,ny,nx))</span>
+<span class="c1">#kindices = kji[0,:,:,:] + 1</span>
+<span class="c1"># apply T-grid mask</span>
+<span class="c1">#mask=kindices&lt;=ds[&#39;KMT&#39;].values[None,:,:]</span>
+<span class="c1">#sigma2_T = sigma2_T.where(mask)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="define-target-sigma-2-vertical-grid">
+<h2>3. Define target sigma-2 vertical grid<a class="headerlink" href="#define-target-sigma-2-vertical-grid" title="Permalink to this headline">#</a></h2>
+<section id="use-a-predefined-target-grid-or-create-your-own">
+<h3>* Use a predefined target grid, or create your own!<a class="headerlink" href="#use-a-predefined-target-grid-or-create-your-own" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use predefined 86-layer sigma2 grid:</span>
+<span class="n">sigma_mid</span><span class="p">,</span><span class="n">sigma_edge</span> <span class="o">=</span> <span class="n">popmoc</span><span class="o">.</span><span class="n">sigma2_grid_86L</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sigma_mid</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sigma_edge</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="compute-isopycnal-layer-thickness">
+<h2>4. Compute Isopycnal Layer Thickness<a class="headerlink" href="#compute-isopycnal-layer-thickness" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here, test histogram by counting cells in each density bin. Vertical sum should be same as KMT.</span>
+<span class="n">iso_count</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="n">sigma2_T</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="p">[</span><span class="n">sigma_edge</span><span class="o">.</span><span class="n">values</span><span class="p">],</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">],</span><span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">iso_count</span> <span class="o">=</span> <span class="n">iso_count</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;density_bin&#39;</span><span class="p">:</span><span class="s1">&#39;sigma&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s1">&#39;sigma&#39;</span><span class="p">:</span><span class="n">sigma_mid</span><span class="p">})</span>
+
+<span class="n">kmtdiff</span> <span class="o">=</span> <span class="n">iso_count</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;sigma&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">ds_temp</span><span class="p">[</span><span class="s1">&#39;KMT&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Max difference from true KMT = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">kmtdiff</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use histogram to compute layer thickness. Vertical sum should be same as HT.</span>
+<span class="n">dzwgts</span> <span class="o">=</span> <span class="p">(</span><span class="n">ds_temp</span><span class="p">[</span><span class="s1">&#39;dz&#39;</span><span class="p">]</span><span class="o">/</span><span class="mf">100.</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m&#39;</span><span class="p">})</span>
+<span class="n">iso_thick</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="n">sigma2_T</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="p">[</span><span class="n">sigma_edge</span><span class="o">.</span><span class="n">values</span><span class="p">],</span> <span class="n">weights</span><span class="o">=</span><span class="n">dzwgts</span><span class="p">,</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">],</span><span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">iso_thick</span> <span class="o">=</span> <span class="n">iso_thick</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;density_bin&#39;</span><span class="p">:</span><span class="s1">&#39;sigma&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s1">&#39;sigma&#39;</span><span class="p">:</span><span class="n">sigma_mid</span><span class="p">})</span>
+<span class="n">iso_thick</span> <span class="o">=</span> <span class="n">iso_thick</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;iso_thick&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span><span class="s1">&#39;Isopycnal Layer Thickness&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;sigma&#39;</span><span class="p">:</span><span class="s1">&#39;sigma_mid&#39;</span><span class="p">})</span>
+<span class="n">iso_thick</span> <span class="o">=</span> <span class="n">iso_thick</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="s1">&#39;sigma_mid&#39;</span><span class="p">,</span><span class="s1">&#39;nlat&#39;</span><span class="p">,</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span>
+
+<span class="n">htdiff</span> <span class="o">=</span> <span class="n">iso_thick</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;sigma_mid&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">ds_temp</span><span class="p">[</span><span class="s1">&#39;HT&#39;</span><span class="p">]</span><span class="o">/</span><span class="mf">100.</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m&#39;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Max difference from true HT = </span><span class="si">{}</span><span class="s2">m&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">htdiff</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compute-isopycnal-layer-depth">
+<h2>5. Compute Isopycnal Layer Depth<a class="headerlink" href="#compute-isopycnal-layer-depth" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cumulative sum of layer thickness yields depth of layer edges:</span>
+<span class="n">iso_depth</span> <span class="o">=</span> <span class="n">iso_thick</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="s1">&#39;sigma_mid&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;iso_depth&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;sigma_mid&#39;</span><span class="p">:</span><span class="s1">&#39;sigma_bot&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span><span class="s1">&#39;Isopycnal Layer Depth&#39;</span><span class="p">})</span>
+<span class="n">sigma_bot</span> <span class="o">=</span> <span class="n">sigma_edge</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">sigma</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="kc">None</span><span class="p">))</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;sigma&#39;</span><span class="p">:</span><span class="s1">&#39;sigma_bot&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span><span class="s1">&#39;Sigma2 at bottom of layer&#39;</span><span class="p">})</span>
+<span class="n">iso_depth</span><span class="p">[</span><span class="s1">&#39;sigma_bot&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sigma_bot</span>
+<span class="n">iso_depth</span> <span class="o">=</span> <span class="n">iso_depth</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="s1">&#39;sigma_bot&#39;</span><span class="p">,</span><span class="s1">&#39;nlat&#39;</span><span class="p">,</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iso_depth</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iso_depth</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">sigma_bot</span><span class="o">=</span><span class="mi">84</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">5500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Isopycnal depth of bottom-most layer should be same as HT.</span>
+<span class="n">htdiff</span> <span class="o">=</span>  <span class="n">iso_depth</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">sigma_bot</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">ds_temp</span><span class="p">[</span><span class="s1">&#39;HT&#39;</span><span class="p">]</span><span class="o">/</span><span class="mf">100.</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m&#39;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Max difference from true HT = </span><span class="si">{}</span><span class="s2">m&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">htdiff</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compute-isopycnal-layer-horizontal-volume-flux">
+<h2>6. Compute Isopycnal Layer Horizontal Volume Flux<a class="headerlink" href="#compute-isopycnal-layer-horizontal-volume-flux" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Grid Metrics</span>
+<span class="n">dxu</span> <span class="o">=</span> <span class="n">ds_uvel</span><span class="p">[</span><span class="s1">&#39;DXU&#39;</span><span class="p">]</span>
+<span class="n">dyu</span> <span class="o">=</span> <span class="n">ds_uvel</span><span class="p">[</span><span class="s1">&#39;DYU&#39;</span><span class="p">]</span>
+<span class="n">dxt</span> <span class="o">=</span> <span class="n">ds_temp</span><span class="p">[</span><span class="s1">&#39;DXT&#39;</span><span class="p">]</span>
+<span class="n">dyt</span> <span class="o">=</span> <span class="n">ds_temp</span><span class="p">[</span><span class="s1">&#39;DYT&#39;</span><span class="p">]</span>
+<span class="n">dz</span> <span class="o">=</span> <span class="n">ds_temp</span><span class="p">[</span><span class="s1">&#39;dz&#39;</span><span class="p">]</span>
+<span class="n">tarea</span> <span class="o">=</span> <span class="n">ds_temp</span><span class="p">[</span><span class="s1">&#39;TAREA&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u_e</span> <span class="o">=</span> <span class="n">ds_uvel</span><span class="p">[</span><span class="s1">&#39;UVEL&#39;</span><span class="p">]</span>
+<span class="n">u_e</span> <span class="o">=</span> <span class="n">u_e</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">u_e</span><span class="o">&lt;</span><span class="mf">1.e30</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">u_i</span> <span class="o">=</span> <span class="n">ds_uisop</span><span class="p">[</span><span class="s1">&#39;UISOP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;TLONG&#39;</span><span class="p">,</span><span class="s1">&#39;ULAT&#39;</span><span class="p">])</span>
+<span class="n">u_i</span> <span class="o">=</span> <span class="n">u_i</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">u_i</span><span class="o">&lt;</span><span class="mf">1.e30</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">u_s</span> <span class="o">=</span> <span class="n">ds_usubm</span><span class="p">[</span><span class="s1">&#39;USUBM&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;TLONG&#39;</span><span class="p">,</span><span class="s1">&#39;ULAT&#39;</span><span class="p">])</span>
+<span class="n">u_s</span> <span class="o">=</span> <span class="n">u_s</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">u_s</span><span class="o">&lt;</span><span class="mf">1.e30</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">v_e</span> <span class="o">=</span> <span class="n">ds_vvel</span><span class="p">[</span><span class="s1">&#39;VVEL&#39;</span><span class="p">]</span>
+<span class="n">v_e</span> <span class="o">=</span> <span class="n">v_e</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">v_e</span><span class="o">&lt;</span><span class="mf">1.e30</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">v_i</span> <span class="o">=</span> <span class="n">ds_visop</span><span class="p">[</span><span class="s1">&#39;VISOP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;ULONG&#39;</span><span class="p">,</span><span class="s1">&#39;TLAT&#39;</span><span class="p">])</span>
+<span class="n">v_i</span> <span class="o">=</span> <span class="n">v_i</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">v_i</span><span class="o">&lt;</span><span class="mf">1.e30</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">v_s</span> <span class="o">=</span> <span class="n">ds_vsubm</span><span class="p">[</span><span class="s1">&#39;VSUBM&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;ULONG&#39;</span><span class="p">,</span><span class="s1">&#39;TLAT&#39;</span><span class="p">])</span>
+<span class="n">v_s</span> <span class="o">=</span> <span class="n">v_s</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">v_s</span><span class="o">&lt;</span><span class="mf">1.e30</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Grid-oriented Volume FLuxes:</span>
+<span class="n">u_e</span> <span class="o">=</span> <span class="p">(</span><span class="n">u_e</span><span class="o">*</span><span class="n">dyu</span><span class="o">*</span><span class="n">dz</span><span class="o">/</span><span class="mf">1.e6</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m^3/s&#39;</span><span class="p">})</span>
+<span class="n">v_e</span> <span class="o">=</span> <span class="p">(</span><span class="n">v_e</span><span class="o">*</span><span class="n">dxu</span><span class="o">*</span><span class="n">dz</span><span class="o">/</span><span class="mf">1.e6</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m^3/s&#39;</span><span class="p">})</span>
+<span class="n">u_i</span> <span class="o">=</span> <span class="p">(</span><span class="n">u_i</span><span class="o">*</span><span class="n">dyt</span><span class="o">*</span><span class="n">dz</span><span class="o">/</span><span class="mf">1.e6</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m^3/s&#39;</span><span class="p">})</span>
+<span class="n">v_i</span> <span class="o">=</span> <span class="p">(</span><span class="n">v_i</span><span class="o">*</span><span class="n">dxt</span><span class="o">*</span><span class="n">dz</span><span class="o">/</span><span class="mf">1.e6</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m^3/s&#39;</span><span class="p">})</span>
+<span class="n">u_s</span> <span class="o">=</span> <span class="p">(</span><span class="n">u_s</span><span class="o">*</span><span class="n">dyt</span><span class="o">*</span><span class="n">dz</span><span class="o">/</span><span class="mf">1.e6</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m^3/s&#39;</span><span class="p">})</span>
+<span class="n">v_s</span> <span class="o">=</span> <span class="p">(</span><span class="n">v_s</span><span class="o">*</span><span class="n">dxt</span><span class="o">*</span><span class="n">dz</span><span class="o">/</span><span class="mf">1.e6</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m^3/s&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert u_e,v_e to C-grid fluxes</span>
+<span class="n">u_e</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">u_e</span><span class="o">+</span><span class="n">u_e</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">nlat</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">v_e</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">v_e</span><span class="o">+</span><span class="n">v_e</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">roll_coords</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Combine velocity components </span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">u_e</span><span class="p">,</span><span class="n">u_i</span><span class="p">,</span><span class="n">u_s</span><span class="p">],</span><span class="n">dim</span><span class="o">=</span><span class="n">ds_moctemp</span><span class="o">.</span><span class="n">moc_components</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">v_e</span><span class="p">,</span><span class="n">v_i</span><span class="p">,</span><span class="n">v_s</span><span class="p">],</span><span class="n">dim</span><span class="o">=</span><span class="n">ds_moctemp</span><span class="o">.</span><span class="n">moc_components</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="c1"># Volume fluxes in density-space. </span>
+<span class="n">iso_uflux</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="n">sigma2_T</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="p">[</span><span class="n">sigma_edge</span><span class="o">.</span><span class="n">values</span><span class="p">],</span><span class="n">weights</span><span class="o">=</span><span class="n">u</span><span class="p">,</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">],</span><span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">iso_uflux</span> <span class="o">=</span> <span class="n">iso_uflux</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;density_bin&#39;</span><span class="p">:</span><span class="s1">&#39;sigma&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s1">&#39;sigma&#39;</span><span class="p">:</span><span class="n">sigma_mid</span><span class="p">})</span>
+
+<span class="n">iso_vflux</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="n">sigma2_T</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="p">[</span><span class="n">sigma_edge</span><span class="o">.</span><span class="n">values</span><span class="p">],</span><span class="n">weights</span><span class="o">=</span><span class="n">v</span><span class="p">,</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">],</span><span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">iso_vflux</span> <span class="o">=</span> <span class="n">iso_vflux</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;density_bin&#39;</span><span class="p">:</span><span class="s1">&#39;sigma&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s1">&#39;sigma&#39;</span><span class="p">:</span><span class="n">sigma_mid</span><span class="p">})</span>
+
+<span class="c1"># Look for fix to histogram keep_coords=True to avoid this step in future:</span>
+<span class="n">iso_uflux</span> <span class="o">=</span> <span class="n">iso_uflux</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s1">&#39;moc_components&#39;</span><span class="p">:</span><span class="n">ds_moctemp</span><span class="o">.</span><span class="n">moc_components</span><span class="p">})</span>
+<span class="n">iso_vflux</span> <span class="o">=</span> <span class="n">iso_vflux</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s1">&#39;moc_components&#39;</span><span class="p">:</span><span class="n">ds_moctemp</span><span class="o">.</span><span class="n">moc_components</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vertical sum in density-space should reproduce vertical sum in depth-space</span>
+<span class="n">ufluxdiff</span> <span class="o">=</span> <span class="n">iso_uflux</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;sigma&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">u</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;z_t&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Max difference from true Uflux = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">ufluxdiff</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+<span class="n">vfluxdiff</span> <span class="o">=</span> <span class="n">iso_vflux</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;sigma&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">v</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;z_t&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Max difference from true Vflux = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">vfluxdiff</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="the-above-large-differences-appear-to-be-associated-with-the-nordic-sea-overflow-parameterization-i-m-not-sure-how-to-handle-overflow-velocities-in-the-moc-computation">
+<h3>The above large differences appear to be associated with the Nordic Sea overflow parameterization. I’m not sure how to handle overflow velocities in the MOC computation:<a class="headerlink" href="#the-above-large-differences-appear-to-be-associated-with-the-nordic-sea-overflow-parameterization-i-m-not-sure-how-to-handle-overflow-velocities-in-the-moc-computation" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ufluxdiff</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">moc_comp</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">vmin</span><span class="o">=-</span><span class="mf">1.e5</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mf">1.e5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="compute-vertical-volume-flux-from-horizontal-flux-convergence">
+<h2>7. Compute Vertical Volume Flux from horizontal flux convergence<a class="headerlink" href="#compute-vertical-volume-flux-from-horizontal-flux-convergence" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">wflux</span> <span class="o">=</span> <span class="n">popmoc</span><span class="o">.</span><span class="n">wflux</span><span class="p">(</span><span class="n">iso_uflux</span><span class="p">,</span><span class="n">iso_vflux</span><span class="p">,</span><span class="s1">&#39;sigma&#39;</span><span class="p">,</span><span class="n">sigma_edge</span><span class="p">,</span><span class="n">grid</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">wflux</span> <span class="o">=</span> <span class="n">wflux</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s1">&#39;TLAT&#39;</span><span class="p">:</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;TLAT&#39;</span><span class="p">],</span><span class="s1">&#39;TLONG&#39;</span><span class="p">:</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;TLONG&#39;</span><span class="p">]})</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;ULAT&#39;</span><span class="p">,</span><span class="s1">&#39;ULONG&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="define-moc-region-masks">
+<h2>8. Define MOC region masks<a class="headerlink" href="#define-moc-region-masks" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Define the MOC region mask:</span>
+<span class="n">rmask</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">REGION_MASK</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;ULONG&#39;</span><span class="p">,</span><span class="s1">&#39;ULAT&#39;</span><span class="p">])</span>
+<span class="n">rmaskglob</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">rmask</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">rmaskatl</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">rmask</span><span class="o">&gt;=</span><span class="mi">6</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">rmask</span><span class="o">&lt;=</span><span class="mi">11</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">rmaskmoc</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">rmaskglob</span><span class="p">,</span><span class="n">rmaskatl</span><span class="p">],</span><span class="n">dim</span><span class="o">=</span><span class="n">ds_moctemp</span><span class="o">.</span><span class="n">transport_regions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmaskmoc</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">levels</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="n">col</span><span class="o">=</span><span class="s1">&#39;transport_reg&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compute-moc">
+<h2>9. Compute MOC<a class="headerlink" href="#compute-moc" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">MOC</span> <span class="o">=</span> <span class="n">popmoc</span><span class="o">.</span><span class="n">compute_MOC</span><span class="p">(</span><span class="n">wflux</span><span class="p">,</span><span class="n">rmaskmoc</span><span class="p">,</span><span class="n">ds_moctemp</span><span class="o">.</span><span class="n">lat_aux_grid</span><span class="p">)</span>
+<span class="n">MOC</span> <span class="o">=</span> <span class="n">MOC</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="s1">&#39;transport_reg&#39;</span><span class="p">,</span><span class="s1">&#39;moc_comp&#39;</span><span class="p">,</span><span class="s1">&#39;sigma&#39;</span><span class="p">,</span><span class="s1">&#39;lat_aux_grid&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="add-southern-boundary-fluxes-for-atlantic-region">
+<h2>10. Add Southern Boundary Fluxes for Atlantic Region<a class="headerlink" href="#add-southern-boundary-fluxes-for-atlantic-region" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># determine j=index of Atlantic region southern boundary</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">rmaskmoc</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">transport_reg</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span>
+<span class="n">atl_j</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">atl_j</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">tmp</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlat</span><span class="o">=</span><span class="n">j</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">):</span>
+        <span class="n">atl_j</span> <span class="o">=</span> <span class="n">j</span>
+    <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">atl_j</span> <span class="o">=</span> <span class="n">atl_j</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">atl_j</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmaskmoc</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">&#39;TLAT&#39;</span><span class="p">][</span><span class="mi">84</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add vflux at southern boundary of Atlantic domain</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">iso_vflux</span><span class="o">*</span><span class="p">(</span><span class="n">rmaskmoc</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">nlat</span><span class="o">=-</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlat</span><span class="o">=</span><span class="n">atl_j</span><span class="p">,</span><span class="n">transport_reg</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span>
+<span class="n">moc_s</span> <span class="o">=</span> <span class="o">-</span><span class="n">tmp</span><span class="o">.</span><span class="n">sortby</span><span class="p">(</span><span class="s1">&#39;sigma&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="s1">&#39;sigma&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sortby</span><span class="p">(</span><span class="s1">&#39;sigma&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">/</span><span class="mf">1.e6</span>
+<span class="n">moc_s</span><span class="p">[</span><span class="s1">&#39;sigma&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sigma_edge</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">sigma</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">MOC</span><span class="p">[{</span><span class="s1">&#39;transport_reg&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">}]</span> <span class="o">=</span> <span class="n">MOC</span><span class="p">[{</span><span class="s1">&#39;transport_reg&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">}]</span> <span class="o">+</span> <span class="n">moc_s</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MOC</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">transport_reg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">moc_comp</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="mi">40</span><span class="p">,</span><span class="mi">28</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MOC</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">transport_reg</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">moc_comp</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="mi">40</span><span class="p">,</span><span class="mi">28</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="save-to-netcdf">
+<h2>11. Save to netcdf<a class="headerlink" href="#save-to-netcdf" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsout</span> <span class="o">=</span> <span class="n">MOC</span><span class="o">.</span><span class="n">to_dataset</span><span class="p">()</span>
+<span class="n">dsout</span><span class="p">[</span><span class="s1">&#39;iso_thick&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iso_thick</span>
+<span class="n">dsout</span><span class="p">[</span><span class="s1">&#39;iso_depth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iso_depth</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds_out_MOC</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">merge</span><span class="p">([</span><span class="n">MOC</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;MOC&#39;</span><span class="p">)])</span>
+<span class="n">ds_out_MOC</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Meridional overturning circulation (MOC)&#39;</span>
+<span class="n">ds_out_MOC</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Sv&#39;</span>
+<span class="n">ds_out_MOC</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Mauricio Rocha&#39;</span>
+<span class="n">ds_out_MOC</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;mauricio.rocha@usp.br&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="define-k-index-array">
+<h2>Define k-index array<a class="headerlink" href="#define-k-index-array" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dims</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+<span class="c1">#ne = dims[0] # ensember member</span>
+<span class="n">nt</span> <span class="o">=</span> <span class="n">dims</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># time</span>
+<span class="n">nz</span> <span class="o">=</span> <span class="n">dims</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># depth</span>
+<span class="n">ny</span> <span class="o">=</span> <span class="n">dims</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># latitude</span>
+<span class="n">nx</span> <span class="o">=</span> <span class="n">dims</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># longitude</span>
+<span class="n">kji</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">indices</span><span class="p">((</span><span class="n">nz</span><span class="p">,</span><span class="n">ny</span><span class="p">,</span><span class="n">nx</span><span class="p">))</span>
+<span class="n">kindices</span> <span class="o">=</span> <span class="n">kji</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:,:]</span> <span class="o">+</span> <span class="mi">1</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<section id="define-sigma2-t">
+<h3>Define sigma2_T<a class="headerlink" href="#define-sigma2-t" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">refz</span> <span class="o">=</span> <span class="mi">2000</span> <span class="c1"># reference depth</span>
+<span class="n">refdep</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">salt</span><span class="p">,</span><span class="n">refz</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;REFDEP&#39;</span><span class="p">)</span>
+<span class="c1"># Sigma2 on model TLAT, TLONG</span>
+<span class="n">sigma2_T</span> <span class="o">=</span> <span class="n">pop_tools</span><span class="o">.</span><span class="n">eos</span><span class="p">(</span><span class="n">salt</span><span class="o">=</span><span class="n">salt</span><span class="p">,</span><span class="n">temp</span><span class="o">=</span><span class="n">temp</span><span class="p">,</span><span class="n">depth</span><span class="o">=</span><span class="n">refdep</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1000</span>
+<span class="n">sigma2_T</span> <span class="o">=</span> <span class="n">sigma2_T</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span><span class="s1">&#39;Sigma referenced to </span><span class="si">{}</span><span class="s1">m&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">refz</span><span class="p">),</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;kg/m^3&#39;</span><span class="p">})</span>
+<span class="n">sigma2_T</span> <span class="o">=</span> <span class="n">sigma2_T</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span> <span class="c1"># Average over time</span>
+<span class="c1"># apply T-grid mask</span>
+<span class="c1">#mask=kindices&lt;=ds[&#39;KMT&#39;].values[None,:,:]</span>
+<span class="c1">#sigma2_T = sigma2_T.where(mask)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id1">
+<h2>Define target sigma-2 vertical grid<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use predefined 86-layer sigma2 grid:</span>
+<span class="n">sigma_mid</span><span class="p">,</span><span class="n">sigma_edge</span> <span class="o">=</span> <span class="n">popmoc</span><span class="o">.</span><span class="n">sigma2_grid_86L</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compute-moc-sigma2-using-xhistogram">
+<h2>Compute MOC(Sigma2) using xhistogram<a class="headerlink" href="#compute-moc-sigma2-using-xhistogram" title="Permalink to this headline">#</a></h2>
+<section id="id2">
+<h3>1. Compute Isopycnal Layer Thickness<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here, test histogram by counting cells in each density bin. Vertical sum should be same as KMT.</span>
+<span class="n">iso_count</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="n">sigma2_T</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="p">[</span><span class="n">sigma_edge</span><span class="o">.</span><span class="n">values</span><span class="p">],</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">],</span><span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">iso_count</span> <span class="o">=</span> <span class="n">iso_count</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;density_bin&#39;</span><span class="p">:</span><span class="s1">&#39;sigma&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s1">&#39;sigma&#39;</span><span class="p">:</span><span class="n">sigma_mid</span><span class="p">})</span>
+<span class="n">kmtdiff</span> <span class="o">=</span> <span class="p">(</span><span class="n">iso_count</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;sigma&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">ds_smbb_temp</span><span class="p">[</span><span class="s1">&#39;KMT&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Max difference from true KMT = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">kmtdiff</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use histogram to compute layer thickness. Vertical sum should be same as HT.</span>
+<span class="n">dzwgts</span> <span class="o">=</span> <span class="p">(</span><span class="n">ds_smbb_temp</span><span class="p">[</span><span class="s1">&#39;dz&#39;</span><span class="p">]</span><span class="o">/</span><span class="mf">100.</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m&#39;</span><span class="p">})</span>
+<span class="n">dzwgts</span> <span class="o">=</span> <span class="n">dzwgts</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span> <span class="c1"># Average over time</span>
+<span class="n">iso_thick</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="n">sigma2_T</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="p">[</span><span class="n">sigma_edge</span><span class="o">.</span><span class="n">values</span><span class="p">],</span> <span class="n">weights</span><span class="o">=</span><span class="n">dzwgts</span><span class="p">,</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">],</span><span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">iso_thick</span> <span class="o">=</span> <span class="n">iso_thick</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;density_bin&#39;</span><span class="p">:</span><span class="s1">&#39;sigma&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s1">&#39;sigma&#39;</span><span class="p">:</span><span class="n">sigma_mid</span><span class="p">})</span>
+<span class="n">iso_thick</span> <span class="o">=</span> <span class="n">iso_thick</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;Isopycnal Layer Thickness&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m&#39;</span><span class="p">})</span>
+<span class="n">htdiff</span> <span class="o">=</span> <span class="n">iso_thick</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;sigma&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">ds_smbb_temp</span><span class="p">[</span><span class="s1">&#39;HT&#39;</span><span class="p">]</span><span class="o">/</span><span class="mf">100.</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m&#39;</span><span class="p">})</span>
+<span class="n">htdiff</span> <span class="o">=</span> <span class="n">htdiff</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span> <span class="c1"># Average over time</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Max difference from true HT = </span><span class="si">{}</span><span class="s2">m&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">htdiff</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+<span class="c1">#In the original Notebook, the maximum difference is: HT = 1.2270752449694555e-05m</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h3>2. Compute Isopycnal Layer Depth<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cumulative sum of layer thickness yields depth of layer edges:</span>
+<span class="n">iso_depth</span> <span class="o">=</span> <span class="n">iso_thick</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="s1">&#39;sigma&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;Isopycnal Layer Depth&#39;</span><span class="p">)</span>
+<span class="n">iso_depth</span><span class="p">[</span><span class="s1">&#39;sigma&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sigma_edge</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">sigma</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="kc">None</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iso_depth</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">sigma</span><span class="o">=</span><span class="mi">84</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">5500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Isopycnal depth of bottom edge should be same as HT.</span>
+<span class="n">htdiff</span> <span class="o">=</span>  <span class="n">iso_depth</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">sigma</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">ds_smbb_temp</span><span class="p">[</span><span class="s1">&#39;HT&#39;</span><span class="p">]</span><span class="o">/</span><span class="mf">100.</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m&#39;</span><span class="p">})</span>
+<span class="n">htdiff</span> <span class="o">=</span> <span class="n">htdiff</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span> <span class="c1"># Average over time</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Max difference from true HT = </span><span class="si">{}</span><span class="s2">m&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">htdiff</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+<span class="c1">#Max difference from true HT = 1.2270752449694555e-05m</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h3>3. Compute Isopycnal Layer Horizontal Volume Flux<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Grid-oriented Volume FLuxes:</span>
+<span class="n">uvel</span> <span class="o">=</span> <span class="n">uvel</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">uvel</span><span class="o">&lt;</span><span class="mf">1.e30</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span>
+<span class="n">vvel</span> <span class="o">=</span> <span class="n">vvel</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">vvel</span><span class="o">&lt;</span><span class="mf">1.e30</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span>
+<span class="n">uvel</span> <span class="o">=</span> <span class="p">(</span><span class="n">uvel</span><span class="o">*</span><span class="n">ds_smbb_uvel</span><span class="p">[</span><span class="s1">&#39;DYU&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">ds_smbb_uvel</span><span class="p">[</span><span class="s1">&#39;dz&#39;</span><span class="p">]</span><span class="o">/</span><span class="mf">1.e6</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m^3/s&#39;</span><span class="p">})</span>
+<span class="n">vvel</span> <span class="o">=</span> <span class="p">(</span><span class="n">vvel</span><span class="o">*</span><span class="n">ds_smbb_vvel</span><span class="p">[</span><span class="s1">&#39;DXU&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">ds_smbb_vvel</span><span class="p">[</span><span class="s1">&#39;dz&#39;</span><span class="p">]</span><span class="o">/</span><span class="mf">1.e6</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;m^3/s&#39;</span><span class="p">})</span>
+<span class="n">uvel</span> <span class="o">=</span> <span class="n">uvel</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span> <span class="c1"># Average over time</span>
+<span class="n">vvel</span> <span class="o">=</span> <span class="n">vvel</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span> <span class="c1"># Average over time</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Volume fluxes in density-space. Vertical sum is density-space should reproduce vertical sum in depth-space.</span>
+<span class="n">iso_uflux</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="n">sigma2_T</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="p">[</span><span class="n">sigma_edge</span><span class="o">.</span><span class="n">values</span><span class="p">],</span><span class="n">weights</span><span class="o">=</span><span class="n">uvel</span><span class="p">,</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">],</span><span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># The &#39;numpy.histogram_bin_edges&#39; function is not implemented by Dask array.</span>
+<span class="n">iso_uflux</span> <span class="o">=</span> <span class="n">iso_uflux</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;density_bin&#39;</span><span class="p">:</span><span class="s1">&#39;sigma&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s1">&#39;sigma&#39;</span><span class="p">:</span><span class="n">sigma_mid</span><span class="p">})</span>
+<span class="n">iso_vflux</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="n">sigma2_T</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="p">[</span><span class="n">sigma_edge</span><span class="o">.</span><span class="n">values</span><span class="p">],</span><span class="n">weights</span><span class="o">=</span><span class="n">vvel</span><span class="p">,</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">],</span><span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">iso_vflux</span> <span class="o">=</span> <span class="n">iso_vflux</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;density_bin&#39;</span><span class="p">:</span><span class="s1">&#39;sigma&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s1">&#39;sigma&#39;</span><span class="p">:</span><span class="n">sigma_mid</span><span class="p">})</span>
+
+<span class="n">ufluxdiff</span> <span class="o">=</span> <span class="n">iso_uflux</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;sigma&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">uvel</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;z_t&#39;</span><span class="p">)</span>
+<span class="n">vfluxdiff</span> <span class="o">=</span> <span class="n">iso_vflux</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;sigma&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">vvel</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;z_t&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Max difference from true Uflux = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">ufluxdiff</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Max difference from true Vflux = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">vfluxdiff</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+<span class="c1">#Max difference from true Uflux = 1367813.3765927013</span>
+<span class="c1">#Max difference from true Vflux = 456888.7641561439</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Need to investigate these differences, which appear to be associated with overflows. The difference plot below shows zero almost everywhere except near Nordic Seas overflow points.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ufluxdiff</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">vmin</span><span class="o">=-</span><span class="mf">1.e5</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mf">1.e5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compute-vertical-volume-flux-using-model-divergence-operator">
+<h3>4. Compute Vertical Volume Flux using model divergence operator<a class="headerlink" href="#compute-vertical-volume-flux-using-model-divergence-operator" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wflux</span> <span class="o">=</span> <span class="n">popmoc</span><span class="o">.</span><span class="n">pop_isowflux</span><span class="p">(</span><span class="n">iso_uflux</span><span class="p">,</span><span class="n">iso_vflux</span><span class="p">,</span><span class="s1">&#39;sigma&#39;</span><span class="p">,</span><span class="n">sigma_edge</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compute-zonal-sums-of-vertical-volume-flux-in-latitude-strips">
+<h3>5. Compute Zonal Sums of Vertical Volume Flux in latitude strips<a class="headerlink" href="#compute-zonal-sums-of-vertical-volume-flux-in-latitude-strips" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load predefined 1-degree target latitude grid:</span>
+<span class="n">lat_mid</span><span class="p">,</span><span class="n">lat_edge</span> <span class="o">=</span> <span class="n">popmoc</span><span class="o">.</span><span class="n">latitude_grid_1deg</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Define MOC region mask with legend:</span>
+<span class="n">rmask</span> <span class="o">=</span> <span class="n">ds_smbb_temp</span><span class="o">.</span><span class="n">REGION_MASK</span>
+<span class="n">rmask</span><span class="o">=</span><span class="n">rmask</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span>
+<span class="n">rmaskmoc</span> <span class="o">=</span> <span class="n">rmask</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">rmask</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">rmaskmoc</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">rmask</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">rmaskmoc</span><span class="p">)</span>
+<span class="n">rmaskmoc</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">rmask</span><span class="o">&gt;=</span><span class="mi">6</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">rmask</span><span class="o">&lt;=</span><span class="mi">11</span><span class="p">),</span><span class="mi">2</span><span class="p">,</span><span class="n">rmaskmoc</span><span class="p">)</span>
+<span class="n">rmaskmoc</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">levels</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]);</span>
+<span class="n">rmaskmoc</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;legend&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s2">&quot;Global&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="s2">&quot;IndoPac+SO&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="s2">&quot;Atlantic&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tarea</span> <span class="o">=</span> <span class="n">ds_smbb_temp</span><span class="p">[</span><span class="s1">&#39;TAREA&#39;</span><span class="p">]</span>
+<span class="n">tarea</span><span class="o">=</span><span class="n">tarea</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span>
+<span class="n">tlat</span> <span class="o">=</span> <span class="n">ds_smbb_temp</span><span class="p">[</span><span class="s1">&#39;TLAT&#39;</span><span class="p">]</span>
+<span class="n">wflux_zonsum</span> <span class="o">=</span> <span class="n">popmoc</span><span class="o">.</span><span class="n">mesh_zonalavg</span><span class="p">(</span><span class="n">wflux</span><span class="p">,</span><span class="n">tarea</span><span class="p">,</span><span class="n">tlat</span><span class="p">,</span><span class="n">rmaskmoc</span><span class="p">,</span><span class="n">rmaskmoc</span><span class="o">.</span><span class="n">legend</span><span class="p">,</span><span class="n">lat_edge</span><span class="p">,</span><span class="nb">sum</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compute-cumulative-meridional-integral-of-zonally-summed-wflux">
+<h3>6. Compute cumulative meridional integral of zonally-summed wflux<a class="headerlink" href="#compute-cumulative-meridional-integral-of-zonally-summed-wflux" title="Permalink to this headline">#</a></h3>
+<p>A southward cumulative integral from 90N avoids issues associated with southern boundary of Atlantic region.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moc</span> <span class="o">=</span> <span class="o">-</span><span class="n">wflux_zonsum</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="s1">&#39;lat&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">moc</span> <span class="o">=</span> <span class="p">(</span><span class="n">moc</span><span class="o">/</span><span class="mf">1.e6</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;Sv&#39;</span><span class="p">})</span>   
+<span class="n">moc</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;MOC&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moc</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span><span class="n">levels</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">38</span><span class="p">,</span><span class="mi">29</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moc</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span><span class="n">levels</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">38</span><span class="p">,</span><span class="mi">29</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moc</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span><span class="n">levels</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">38</span><span class="p">,</span><span class="mi">29</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moc</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;region&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span><span class="n">levels</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">38</span><span class="p">,</span><span class="mi">29</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "npl-2022b"
+        },
+        kernelOptions: {
+            kernelName: "npl-2022b",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'npl-2022b'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Notebook_lens2_ssp370_MOCz_maxima.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">CESM2 - LARGE ENSEMBLE (LENS2)</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Notebook_lens2_historical_MOC_upper_branch.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">CESM2 - LARGE ENSEMBLE (LENS2)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By NCAR ESDS Team<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

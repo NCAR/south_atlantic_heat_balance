@@ -125,7 +125,62 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Notebook_South_Atlantic_Surface_Analyses.html">
+  <a class="reference internal" href="Notebook_South_Atlantic_Surface_Analyses_ocn_comp_historical.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_South_Atlantic_Surface_Analyses_ocn_comp_ssp370.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_South_Atlantic_Surface_Analyses_atm_comp_historical.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_South_Atlantic_Surface_Analyses_atm_comp_ssp370.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_lens2_historical_MOCz_maxima.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_lens2_ssp370_MOCz_maxima.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_lens2_MOCsig2_1deg.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_lens2_historical_MOC_upper_branch.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_lens2_ssp370_MOC_upper_branch.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_South_Atlantic_plots_temporal_series_historical.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_ascii_netcdf.html">
+   CESM2 - LARGE ENSEMBLE (LENS2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Notebook_North_Atlantic_XMXL_hovmoller_diagrams_historical.html">
    CESM2 - LARGE ENSEMBLE (LENS2)
   </a>
  </li>
@@ -299,66 +354,68 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#before-we-begin-here-are-some-valuable-notes-about-lens2">
    Before we begin, here are some valuable notes about LENS2:
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ssp370-refers-to-the-shared-socioeconomic-pathway-ssp-and-represents-the-forced-scenario-until-the-year-of-2100-the-choice-of-the-ssp3-7-0-scenario-forcing-follows-cmip6-recommendations-oneill-et-al-2016-that-precisely-emphasize-the-value-of-this-relatively-high-forcing-level-so-as-to-quantify-changes-in-natural-variability-rodgers-et-al-2021-ssp37-0-lies-between-rcp6-0-and-rcp8-5-and-represents-the-medium-to-the-high-end-of-the-range-of-future-forcing-pathways">
-   * ssp370: refers to the Shared Socioeconomic Pathway (SSP) and represents the forced scenario until the year of 2100. The choice of the SSP3-7.0 scenario forcing follows CMIP6 recommendations (O’Neill et al., 2016) that precisely emphasize the value of this relatively high forcing level so as to quantify changes in natural variability (Rodgers et al. 2021). SSP3–7.0 lies between RCP6.0 and RCP8.5 and represents the medium to the high end of the range of future forcing pathways.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#p-s-rcp8-5-means-representative-concentration-pathways-for-8-5-w-m2">
-   P.S.: RCP8.5 means Representative Concentration Pathways for 8.5 W/m².
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#historical-1850-2015-not-projected-period-so-ideal-for-doing-validation-of-lens2-with-reanalysis-or-in-situ-data-because-of-its-spatial-resolution-and-temporal-extent-era5-can-be-used-to-do-this-validation-considering-the-amoc-strength-at-26-5n-as-an-example-fig-s2-in-rodgers-et-al-2021-the-ensemble-mean-amoc-strength-for-each-of-the-micro-perturbation-clusters-initialized-for-years-1231-strength-1251-decreasing-1281-increasing-and-1301-weak-of-the-preindustrial-control-run-averaged-across-20-members-for-each-case-converge-only-after-several-decades-indicative-of-the-timescale-over-which-the-initial-condition-memory-persists-for-amoc-for-this-reason-their-analysis-of-internal-variability-focuses-on-the-period-after-1960-more-than-an-entire-century-after-initialization-how-to-know-what-is-forced-variability-and-natural-variability-one-way-to-check-this-is-to-differentiate-between-members-of-the-same-experiment">
-   * historical (1850 - 2015): not projected period, so ideal for doing validation of LENS2 with reanalysis or in situ data. Because of its spatial resolution and temporal extent, ERA5 can be used to do this validation. Considering the AMOC strength at 26.5N as an example {Fig. S2 in Rodgers et al. (2021)}, the ensemble mean AMOC strength for each of the micro-perturbation clusters initialized for years 1231 (strength), 1251 (decreasing), 1281 (increasing), and 1301 (weak) of the preindustrial control run (averaged across 20 members for each case) converge only after several decades, indicative of the timescale over which the initial condition memory persists for AMOC. For this reason, their analysis of internal variability focuses on the period after 1960, more than an entire century after initialization. How to know what is forced variability and natural variability? One way to check this is to differentiate between members of the same experiment.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cmip-the-first-50-members-of-the-large-ensemble-follow-cmip6-protocols-van-marle-et-al-2017-with-biomass-burning-following-the-description-in-the-cesm2-overview-paper-danabasoglu-et-al-2020-and-this-forcing-is-referred-to-as-cmip6-rodgers-et-al-2021">
-   * cmip: The first 50 members of the large ensemble follow CMIP6 protocols (Van Marle et al., 2017), with biomass burning following the description in the CESM2 overview paper (Danabasoglu et al., 2020), and this forcing is referred to as CMIP6 (Rodgers et al. (2021)).
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#smbb-for-the-second-set-of-50-members-which-we-refer-to-as-smbb-for-smoothed-biomass-burning-fluxes-the-cmip6-biomass-burning-emissions-of-all-relevant-species-for-community-atmosphere-model-version-6-cam6-were-smoothed-in-time-with-an-11-year-running-mean-filter">
-   * smbb: For the second set of 50 members, which we refer to as SMBB (for smoothed biomass burning fluxes), the CMIP6 biomass burning emissions of all relevant species for Community Atmosphere Model version 6 (CAM6) were smoothed in time with an 11-year running mean filter.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rodgers-et-al-2021-https-esd-copernicus-org-articles-12-1393-2021">
-   * Rodgers et al. (2021): https://esd.copernicus.org/articles/12/1393/2021/
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fasullo-et-al-2021-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2021gl093841">
-   * Fasullo et al. (2021): https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL093841
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#derepentigny-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2020jc016133">
-   * DeRepentigny et al. (2020): https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016133
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#danabasoglu-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-10-1029-2019ms001916">
-   * Danabasoglu et al. (2020): https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019MS001916
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#van-marle-et-al-2017-https-gmd-copernicus-org-articles-10-3329-2017">
-   * van Marle et al. (2017): https://gmd.copernicus.org/articles/10/3329/2017/
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oneill-et-al-2016-https-gmd-copernicus-org-articles-9-3461-2016">
-   * O’Neill et al. (2016): https://gmd.copernicus.org/articles/9/3461/2016/
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ssp370-refers-to-the-shared-socioeconomic-pathway-ssp-and-represents-the-forced-scenario-until-the-year-of-2100-the-choice-of-the-ssp3-7-0-scenario-forcing-follows-cmip6-recommendations-oneill-et-al-2016-that-precisely-emphasize-the-value-of-this-relatively-high-forcing-level-so-as-to-quantify-changes-in-natural-variability-rodgers-et-al-2021-ssp37-0-lies-between-rcp6-0-and-rcp8-5-and-represents-the-medium-to-the-high-end-of-the-range-of-future-forcing-pathways">
+     * ssp370: refers to the Shared Socioeconomic Pathway (SSP) and represents the forced scenario until the year of 2100. The choice of the SSP3-7.0 scenario forcing follows CMIP6 recommendations (O’Neill et al., 2016) that precisely emphasize the value of this relatively high forcing level so as to quantify changes in natural variability (Rodgers et al. 2021). SSP3–7.0 lies between RCP6.0 and RCP8.5 and represents the medium to the high end of the range of future forcing pathways.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#p-s-rcp8-5-means-representative-concentration-pathways-for-8-5-w-m2-3-2-5-4oc">
+     P.S.: RCP8.5 means Representative Concentration Pathways for 8.5 W/m² (3.2-5.4oC)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#historical-1850-2014-not-projected-period-so-ideal-for-doing-validation-of-lens2-with-reanalysis-or-in-situ-data-because-of-its-spatial-resolution-and-temporal-extent-era5-can-be-used-to-do-this-validation-considering-the-amoc-strength-at-26-5n-as-an-example-fig-s2-in-rodgers-et-al-2021-the-ensemble-mean-amoc-strength-for-each-of-the-micro-perturbation-clusters-initialized-for-years-1231-strength-1251-decreasing-1281-increasing-and-1301-weak-of-the-preindustrial-control-run-averaged-across-20-members-for-each-case-converge-only-after-several-decades-indicative-of-the-timescale-over-which-the-initial-condition-memory-persists-for-amoc-for-this-reason-their-analysis-of-internal-variability-focuses-on-the-period-after-1960-more-than-an-entire-century-after-initialization-how-to-know-what-is-forced-variability-and-natural-variability-one-way-to-check-this-is-to-differentiate-between-members-of-the-same-experiment">
+     * historical (1850 - 2014): not projected period, so ideal for doing validation of LENS2 with reanalysis or in situ data. Because of its spatial resolution and temporal extent, ERA5 can be used to do this validation. Considering the AMOC strength at 26.5N as an example {Fig. S2 in Rodgers et al. (2021)}, the ensemble mean AMOC strength for each of the micro-perturbation clusters initialized for years 1231 (strength), 1251 (decreasing), 1281 (increasing), and 1301 (weak) of the preindustrial control run (averaged across 20 members for each case) converge only after several decades, indicative of the timescale over which the initial condition memory persists for AMOC. For this reason, their analysis of internal variability focuses on the period after 1960, more than an entire century after initialization. How to know what is forced variability and natural variability? One way to check this is to differentiate between members of the same experiment.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cmip-the-first-50-members-of-the-large-ensemble-follow-cmip6-protocols-van-marle-et-al-2017-with-biomass-burning-following-the-description-in-the-cesm2-overview-paper-danabasoglu-et-al-2020-and-this-forcing-is-referred-to-as-cmip6-rodgers-et-al-2021-the-control-experiment-are-the-members-who-have-the-year-1181">
+     * cmip: The first 50 members of the large ensemble follow CMIP6 protocols (Van Marle et al., 2017), with biomass burning following the description in the CESM2 overview paper (Danabasoglu et al., 2020), and this forcing is referred to as CMIP6 (Rodgers et al. (2021)). The control experiment are the members who have the year 1181.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#smbb-for-the-second-set-of-50-members-which-we-refer-to-as-smbb-for-smoothed-biomass-burning-fluxes-the-cmip6-biomass-burning-emissions-of-all-relevant-species-for-community-atmosphere-model-version-6-cam6-were-smoothed-in-time-with-an-11-year-running-mean-filter-the-control-experiment-are-the-members-who-have-the-year-1191">
+     * smbb: For the second set of 50 members, which we refer to as SMBB (for smoothed biomass burning fluxes), the CMIP6 biomass burning emissions of all relevant species for Community Atmosphere Model version 6 (CAM6) were smoothed in time with an 11-year running mean filter. The control experiment are the members who have the year 1191.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rodgers-et-al-2021-https-esd-copernicus-org-articles-12-1393-2021">
+     * Rodgers et al. (2021): https://esd.copernicus.org/articles/12/1393/2021/
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fasullo-et-al-2021-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2021gl093841">
+     * Fasullo et al. (2021): https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL093841
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derepentigny-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2020jc016133">
+     * DeRepentigny et al. (2020): https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016133
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#danabasoglu-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-10-1029-2019ms001916">
+     * Danabasoglu et al. (2020): https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019MS001916
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#van-marle-et-al-2017-https-gmd-copernicus-org-articles-10-3329-2017">
+     * van Marle et al. (2017): https://gmd.copernicus.org/articles/10/3329/2017/
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oneill-et-al-2016-https-gmd-copernicus-org-articles-9-3461-2016">
+     * O’Neill et al. (2016): https://gmd.copernicus.org/articles/9/3461/2016/
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -388,66 +445,68 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#before-we-begin-here-are-some-valuable-notes-about-lens2">
    Before we begin, here are some valuable notes about LENS2:
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ssp370-refers-to-the-shared-socioeconomic-pathway-ssp-and-represents-the-forced-scenario-until-the-year-of-2100-the-choice-of-the-ssp3-7-0-scenario-forcing-follows-cmip6-recommendations-oneill-et-al-2016-that-precisely-emphasize-the-value-of-this-relatively-high-forcing-level-so-as-to-quantify-changes-in-natural-variability-rodgers-et-al-2021-ssp37-0-lies-between-rcp6-0-and-rcp8-5-and-represents-the-medium-to-the-high-end-of-the-range-of-future-forcing-pathways">
-   * ssp370: refers to the Shared Socioeconomic Pathway (SSP) and represents the forced scenario until the year of 2100. The choice of the SSP3-7.0 scenario forcing follows CMIP6 recommendations (O’Neill et al., 2016) that precisely emphasize the value of this relatively high forcing level so as to quantify changes in natural variability (Rodgers et al. 2021). SSP3–7.0 lies between RCP6.0 and RCP8.5 and represents the medium to the high end of the range of future forcing pathways.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#p-s-rcp8-5-means-representative-concentration-pathways-for-8-5-w-m2">
-   P.S.: RCP8.5 means Representative Concentration Pathways for 8.5 W/m².
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#historical-1850-2015-not-projected-period-so-ideal-for-doing-validation-of-lens2-with-reanalysis-or-in-situ-data-because-of-its-spatial-resolution-and-temporal-extent-era5-can-be-used-to-do-this-validation-considering-the-amoc-strength-at-26-5n-as-an-example-fig-s2-in-rodgers-et-al-2021-the-ensemble-mean-amoc-strength-for-each-of-the-micro-perturbation-clusters-initialized-for-years-1231-strength-1251-decreasing-1281-increasing-and-1301-weak-of-the-preindustrial-control-run-averaged-across-20-members-for-each-case-converge-only-after-several-decades-indicative-of-the-timescale-over-which-the-initial-condition-memory-persists-for-amoc-for-this-reason-their-analysis-of-internal-variability-focuses-on-the-period-after-1960-more-than-an-entire-century-after-initialization-how-to-know-what-is-forced-variability-and-natural-variability-one-way-to-check-this-is-to-differentiate-between-members-of-the-same-experiment">
-   * historical (1850 - 2015): not projected period, so ideal for doing validation of LENS2 with reanalysis or in situ data. Because of its spatial resolution and temporal extent, ERA5 can be used to do this validation. Considering the AMOC strength at 26.5N as an example {Fig. S2 in Rodgers et al. (2021)}, the ensemble mean AMOC strength for each of the micro-perturbation clusters initialized for years 1231 (strength), 1251 (decreasing), 1281 (increasing), and 1301 (weak) of the preindustrial control run (averaged across 20 members for each case) converge only after several decades, indicative of the timescale over which the initial condition memory persists for AMOC. For this reason, their analysis of internal variability focuses on the period after 1960, more than an entire century after initialization. How to know what is forced variability and natural variability? One way to check this is to differentiate between members of the same experiment.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cmip-the-first-50-members-of-the-large-ensemble-follow-cmip6-protocols-van-marle-et-al-2017-with-biomass-burning-following-the-description-in-the-cesm2-overview-paper-danabasoglu-et-al-2020-and-this-forcing-is-referred-to-as-cmip6-rodgers-et-al-2021">
-   * cmip: The first 50 members of the large ensemble follow CMIP6 protocols (Van Marle et al., 2017), with biomass burning following the description in the CESM2 overview paper (Danabasoglu et al., 2020), and this forcing is referred to as CMIP6 (Rodgers et al. (2021)).
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#smbb-for-the-second-set-of-50-members-which-we-refer-to-as-smbb-for-smoothed-biomass-burning-fluxes-the-cmip6-biomass-burning-emissions-of-all-relevant-species-for-community-atmosphere-model-version-6-cam6-were-smoothed-in-time-with-an-11-year-running-mean-filter">
-   * smbb: For the second set of 50 members, which we refer to as SMBB (for smoothed biomass burning fluxes), the CMIP6 biomass burning emissions of all relevant species for Community Atmosphere Model version 6 (CAM6) were smoothed in time with an 11-year running mean filter.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rodgers-et-al-2021-https-esd-copernicus-org-articles-12-1393-2021">
-   * Rodgers et al. (2021): https://esd.copernicus.org/articles/12/1393/2021/
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fasullo-et-al-2021-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2021gl093841">
-   * Fasullo et al. (2021): https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL093841
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#derepentigny-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2020jc016133">
-   * DeRepentigny et al. (2020): https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016133
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#danabasoglu-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-10-1029-2019ms001916">
-   * Danabasoglu et al. (2020): https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019MS001916
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#van-marle-et-al-2017-https-gmd-copernicus-org-articles-10-3329-2017">
-   * van Marle et al. (2017): https://gmd.copernicus.org/articles/10/3329/2017/
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oneill-et-al-2016-https-gmd-copernicus-org-articles-9-3461-2016">
-   * O’Neill et al. (2016): https://gmd.copernicus.org/articles/9/3461/2016/
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ssp370-refers-to-the-shared-socioeconomic-pathway-ssp-and-represents-the-forced-scenario-until-the-year-of-2100-the-choice-of-the-ssp3-7-0-scenario-forcing-follows-cmip6-recommendations-oneill-et-al-2016-that-precisely-emphasize-the-value-of-this-relatively-high-forcing-level-so-as-to-quantify-changes-in-natural-variability-rodgers-et-al-2021-ssp37-0-lies-between-rcp6-0-and-rcp8-5-and-represents-the-medium-to-the-high-end-of-the-range-of-future-forcing-pathways">
+     * ssp370: refers to the Shared Socioeconomic Pathway (SSP) and represents the forced scenario until the year of 2100. The choice of the SSP3-7.0 scenario forcing follows CMIP6 recommendations (O’Neill et al., 2016) that precisely emphasize the value of this relatively high forcing level so as to quantify changes in natural variability (Rodgers et al. 2021). SSP3–7.0 lies between RCP6.0 and RCP8.5 and represents the medium to the high end of the range of future forcing pathways.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#p-s-rcp8-5-means-representative-concentration-pathways-for-8-5-w-m2-3-2-5-4oc">
+     P.S.: RCP8.5 means Representative Concentration Pathways for 8.5 W/m² (3.2-5.4oC)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#historical-1850-2014-not-projected-period-so-ideal-for-doing-validation-of-lens2-with-reanalysis-or-in-situ-data-because-of-its-spatial-resolution-and-temporal-extent-era5-can-be-used-to-do-this-validation-considering-the-amoc-strength-at-26-5n-as-an-example-fig-s2-in-rodgers-et-al-2021-the-ensemble-mean-amoc-strength-for-each-of-the-micro-perturbation-clusters-initialized-for-years-1231-strength-1251-decreasing-1281-increasing-and-1301-weak-of-the-preindustrial-control-run-averaged-across-20-members-for-each-case-converge-only-after-several-decades-indicative-of-the-timescale-over-which-the-initial-condition-memory-persists-for-amoc-for-this-reason-their-analysis-of-internal-variability-focuses-on-the-period-after-1960-more-than-an-entire-century-after-initialization-how-to-know-what-is-forced-variability-and-natural-variability-one-way-to-check-this-is-to-differentiate-between-members-of-the-same-experiment">
+     * historical (1850 - 2014): not projected period, so ideal for doing validation of LENS2 with reanalysis or in situ data. Because of its spatial resolution and temporal extent, ERA5 can be used to do this validation. Considering the AMOC strength at 26.5N as an example {Fig. S2 in Rodgers et al. (2021)}, the ensemble mean AMOC strength for each of the micro-perturbation clusters initialized for years 1231 (strength), 1251 (decreasing), 1281 (increasing), and 1301 (weak) of the preindustrial control run (averaged across 20 members for each case) converge only after several decades, indicative of the timescale over which the initial condition memory persists for AMOC. For this reason, their analysis of internal variability focuses on the period after 1960, more than an entire century after initialization. How to know what is forced variability and natural variability? One way to check this is to differentiate between members of the same experiment.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cmip-the-first-50-members-of-the-large-ensemble-follow-cmip6-protocols-van-marle-et-al-2017-with-biomass-burning-following-the-description-in-the-cesm2-overview-paper-danabasoglu-et-al-2020-and-this-forcing-is-referred-to-as-cmip6-rodgers-et-al-2021-the-control-experiment-are-the-members-who-have-the-year-1181">
+     * cmip: The first 50 members of the large ensemble follow CMIP6 protocols (Van Marle et al., 2017), with biomass burning following the description in the CESM2 overview paper (Danabasoglu et al., 2020), and this forcing is referred to as CMIP6 (Rodgers et al. (2021)). The control experiment are the members who have the year 1181.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#smbb-for-the-second-set-of-50-members-which-we-refer-to-as-smbb-for-smoothed-biomass-burning-fluxes-the-cmip6-biomass-burning-emissions-of-all-relevant-species-for-community-atmosphere-model-version-6-cam6-were-smoothed-in-time-with-an-11-year-running-mean-filter-the-control-experiment-are-the-members-who-have-the-year-1191">
+     * smbb: For the second set of 50 members, which we refer to as SMBB (for smoothed biomass burning fluxes), the CMIP6 biomass burning emissions of all relevant species for Community Atmosphere Model version 6 (CAM6) were smoothed in time with an 11-year running mean filter. The control experiment are the members who have the year 1191.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rodgers-et-al-2021-https-esd-copernicus-org-articles-12-1393-2021">
+     * Rodgers et al. (2021): https://esd.copernicus.org/articles/12/1393/2021/
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fasullo-et-al-2021-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2021gl093841">
+     * Fasullo et al. (2021): https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL093841
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derepentigny-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2020jc016133">
+     * DeRepentigny et al. (2020): https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016133
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#danabasoglu-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-10-1029-2019ms001916">
+     * Danabasoglu et al. (2020): https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019MS001916
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#van-marle-et-al-2017-https-gmd-copernicus-org-articles-10-3329-2017">
+     * van Marle et al. (2017): https://gmd.copernicus.org/articles/10/3329/2017/
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oneill-et-al-2016-https-gmd-copernicus-org-articles-9-3461-2016">
+     * O’Neill et al. (2016): https://gmd.copernicus.org/articles/9/3461/2016/
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -466,42 +525,42 @@ title="Print to PDF"
 </section>
 <section id="before-we-begin-here-are-some-valuable-notes-about-lens2">
 <h2>Before we begin, here are some valuable notes about LENS2:<a class="headerlink" href="#before-we-begin-here-are-some-valuable-notes-about-lens2" title="Permalink to this headline">#</a></h2>
-</section>
 <section id="ssp370-refers-to-the-shared-socioeconomic-pathway-ssp-and-represents-the-forced-scenario-until-the-year-of-2100-the-choice-of-the-ssp3-7-0-scenario-forcing-follows-cmip6-recommendations-oneill-et-al-2016-that-precisely-emphasize-the-value-of-this-relatively-high-forcing-level-so-as-to-quantify-changes-in-natural-variability-rodgers-et-al-2021-ssp37-0-lies-between-rcp6-0-and-rcp8-5-and-represents-the-medium-to-the-high-end-of-the-range-of-future-forcing-pathways">
-<h2>* ssp370: refers to the Shared Socioeconomic Pathway (SSP) and represents the forced scenario until the year of 2100. The choice of the SSP3-7.0 scenario forcing follows CMIP6 recommendations (O’Neill et al., 2016) that precisely emphasize the value of this relatively high forcing level so as to quantify changes in natural variability (Rodgers et al. 2021). SSP3–7.0 lies between RCP6.0 and RCP8.5 and represents the medium to the high end of the range of future forcing pathways.<a class="headerlink" href="#ssp370-refers-to-the-shared-socioeconomic-pathway-ssp-and-represents-the-forced-scenario-until-the-year-of-2100-the-choice-of-the-ssp3-7-0-scenario-forcing-follows-cmip6-recommendations-oneill-et-al-2016-that-precisely-emphasize-the-value-of-this-relatively-high-forcing-level-so-as-to-quantify-changes-in-natural-variability-rodgers-et-al-2021-ssp37-0-lies-between-rcp6-0-and-rcp8-5-and-represents-the-medium-to-the-high-end-of-the-range-of-future-forcing-pathways" title="Permalink to this headline">#</a></h2>
+<h3>* ssp370: refers to the Shared Socioeconomic Pathway (SSP) and represents the forced scenario until the year of 2100. The choice of the SSP3-7.0 scenario forcing follows CMIP6 recommendations (O’Neill et al., 2016) that precisely emphasize the value of this relatively high forcing level so as to quantify changes in natural variability (Rodgers et al. 2021). SSP3–7.0 lies between RCP6.0 and RCP8.5 and represents the medium to the high end of the range of future forcing pathways.<a class="headerlink" href="#ssp370-refers-to-the-shared-socioeconomic-pathway-ssp-and-represents-the-forced-scenario-until-the-year-of-2100-the-choice-of-the-ssp3-7-0-scenario-forcing-follows-cmip6-recommendations-oneill-et-al-2016-that-precisely-emphasize-the-value-of-this-relatively-high-forcing-level-so-as-to-quantify-changes-in-natural-variability-rodgers-et-al-2021-ssp37-0-lies-between-rcp6-0-and-rcp8-5-and-represents-the-medium-to-the-high-end-of-the-range-of-future-forcing-pathways" title="Permalink to this headline">#</a></h3>
 </section>
-<section id="p-s-rcp8-5-means-representative-concentration-pathways-for-8-5-w-m2">
-<h2>P.S.: RCP8.5 means Representative Concentration Pathways for 8.5 W/m².<a class="headerlink" href="#p-s-rcp8-5-means-representative-concentration-pathways-for-8-5-w-m2" title="Permalink to this headline">#</a></h2>
+<section id="p-s-rcp8-5-means-representative-concentration-pathways-for-8-5-w-m2-3-2-5-4oc">
+<h3>P.S.: RCP8.5 means Representative Concentration Pathways for 8.5 W/m² (3.2-5.4oC)<a class="headerlink" href="#p-s-rcp8-5-means-representative-concentration-pathways-for-8-5-w-m2-3-2-5-4oc" title="Permalink to this headline">#</a></h3>
 </section>
-<section id="historical-1850-2015-not-projected-period-so-ideal-for-doing-validation-of-lens2-with-reanalysis-or-in-situ-data-because-of-its-spatial-resolution-and-temporal-extent-era5-can-be-used-to-do-this-validation-considering-the-amoc-strength-at-26-5n-as-an-example-fig-s2-in-rodgers-et-al-2021-the-ensemble-mean-amoc-strength-for-each-of-the-micro-perturbation-clusters-initialized-for-years-1231-strength-1251-decreasing-1281-increasing-and-1301-weak-of-the-preindustrial-control-run-averaged-across-20-members-for-each-case-converge-only-after-several-decades-indicative-of-the-timescale-over-which-the-initial-condition-memory-persists-for-amoc-for-this-reason-their-analysis-of-internal-variability-focuses-on-the-period-after-1960-more-than-an-entire-century-after-initialization-how-to-know-what-is-forced-variability-and-natural-variability-one-way-to-check-this-is-to-differentiate-between-members-of-the-same-experiment">
-<h2>* historical (1850 - 2015): not projected period, so ideal for doing validation of LENS2 with reanalysis or in situ data. Because of its spatial resolution and temporal extent, ERA5 can be used to do this validation. Considering the AMOC strength at 26.5N as an example {Fig. S2 in Rodgers et al. (2021)}, the ensemble mean AMOC strength for each of the micro-perturbation clusters initialized for years 1231 (strength), 1251 (decreasing), 1281 (increasing), and 1301 (weak) of the preindustrial control run (averaged across 20 members for each case) converge only after several decades, indicative of the timescale over which the initial condition memory persists for AMOC. For this reason, their analysis of internal variability focuses on the period after 1960, more than an entire century after initialization. How to know what is forced variability and natural variability? One way to check this is to differentiate between members of the same experiment.<a class="headerlink" href="#historical-1850-2015-not-projected-period-so-ideal-for-doing-validation-of-lens2-with-reanalysis-or-in-situ-data-because-of-its-spatial-resolution-and-temporal-extent-era5-can-be-used-to-do-this-validation-considering-the-amoc-strength-at-26-5n-as-an-example-fig-s2-in-rodgers-et-al-2021-the-ensemble-mean-amoc-strength-for-each-of-the-micro-perturbation-clusters-initialized-for-years-1231-strength-1251-decreasing-1281-increasing-and-1301-weak-of-the-preindustrial-control-run-averaged-across-20-members-for-each-case-converge-only-after-several-decades-indicative-of-the-timescale-over-which-the-initial-condition-memory-persists-for-amoc-for-this-reason-their-analysis-of-internal-variability-focuses-on-the-period-after-1960-more-than-an-entire-century-after-initialization-how-to-know-what-is-forced-variability-and-natural-variability-one-way-to-check-this-is-to-differentiate-between-members-of-the-same-experiment" title="Permalink to this headline">#</a></h2>
+<section id="historical-1850-2014-not-projected-period-so-ideal-for-doing-validation-of-lens2-with-reanalysis-or-in-situ-data-because-of-its-spatial-resolution-and-temporal-extent-era5-can-be-used-to-do-this-validation-considering-the-amoc-strength-at-26-5n-as-an-example-fig-s2-in-rodgers-et-al-2021-the-ensemble-mean-amoc-strength-for-each-of-the-micro-perturbation-clusters-initialized-for-years-1231-strength-1251-decreasing-1281-increasing-and-1301-weak-of-the-preindustrial-control-run-averaged-across-20-members-for-each-case-converge-only-after-several-decades-indicative-of-the-timescale-over-which-the-initial-condition-memory-persists-for-amoc-for-this-reason-their-analysis-of-internal-variability-focuses-on-the-period-after-1960-more-than-an-entire-century-after-initialization-how-to-know-what-is-forced-variability-and-natural-variability-one-way-to-check-this-is-to-differentiate-between-members-of-the-same-experiment">
+<h3>* historical (1850 - 2014): not projected period, so ideal for doing validation of LENS2 with reanalysis or in situ data. Because of its spatial resolution and temporal extent, ERA5 can be used to do this validation. Considering the AMOC strength at 26.5N as an example {Fig. S2 in Rodgers et al. (2021)}, the ensemble mean AMOC strength for each of the micro-perturbation clusters initialized for years 1231 (strength), 1251 (decreasing), 1281 (increasing), and 1301 (weak) of the preindustrial control run (averaged across 20 members for each case) converge only after several decades, indicative of the timescale over which the initial condition memory persists for AMOC. For this reason, their analysis of internal variability focuses on the period after 1960, more than an entire century after initialization. How to know what is forced variability and natural variability? One way to check this is to differentiate between members of the same experiment.<a class="headerlink" href="#historical-1850-2014-not-projected-period-so-ideal-for-doing-validation-of-lens2-with-reanalysis-or-in-situ-data-because-of-its-spatial-resolution-and-temporal-extent-era5-can-be-used-to-do-this-validation-considering-the-amoc-strength-at-26-5n-as-an-example-fig-s2-in-rodgers-et-al-2021-the-ensemble-mean-amoc-strength-for-each-of-the-micro-perturbation-clusters-initialized-for-years-1231-strength-1251-decreasing-1281-increasing-and-1301-weak-of-the-preindustrial-control-run-averaged-across-20-members-for-each-case-converge-only-after-several-decades-indicative-of-the-timescale-over-which-the-initial-condition-memory-persists-for-amoc-for-this-reason-their-analysis-of-internal-variability-focuses-on-the-period-after-1960-more-than-an-entire-century-after-initialization-how-to-know-what-is-forced-variability-and-natural-variability-one-way-to-check-this-is-to-differentiate-between-members-of-the-same-experiment" title="Permalink to this headline">#</a></h3>
 </section>
-<section id="cmip-the-first-50-members-of-the-large-ensemble-follow-cmip6-protocols-van-marle-et-al-2017-with-biomass-burning-following-the-description-in-the-cesm2-overview-paper-danabasoglu-et-al-2020-and-this-forcing-is-referred-to-as-cmip6-rodgers-et-al-2021">
-<h2>* cmip: The first 50 members of the large ensemble follow CMIP6 protocols (Van Marle et al., 2017), with biomass burning following the description in the CESM2 overview paper (Danabasoglu et al., 2020), and this forcing is referred to as CMIP6 (Rodgers et al. (2021)).<a class="headerlink" href="#cmip-the-first-50-members-of-the-large-ensemble-follow-cmip6-protocols-van-marle-et-al-2017-with-biomass-burning-following-the-description-in-the-cesm2-overview-paper-danabasoglu-et-al-2020-and-this-forcing-is-referred-to-as-cmip6-rodgers-et-al-2021" title="Permalink to this headline">#</a></h2>
+<section id="cmip-the-first-50-members-of-the-large-ensemble-follow-cmip6-protocols-van-marle-et-al-2017-with-biomass-burning-following-the-description-in-the-cesm2-overview-paper-danabasoglu-et-al-2020-and-this-forcing-is-referred-to-as-cmip6-rodgers-et-al-2021-the-control-experiment-are-the-members-who-have-the-year-1181">
+<h3>* cmip: The first 50 members of the large ensemble follow CMIP6 protocols (Van Marle et al., 2017), with biomass burning following the description in the CESM2 overview paper (Danabasoglu et al., 2020), and this forcing is referred to as CMIP6 (Rodgers et al. (2021)). The control experiment are the members who have the year 1181.<a class="headerlink" href="#cmip-the-first-50-members-of-the-large-ensemble-follow-cmip6-protocols-van-marle-et-al-2017-with-biomass-burning-following-the-description-in-the-cesm2-overview-paper-danabasoglu-et-al-2020-and-this-forcing-is-referred-to-as-cmip6-rodgers-et-al-2021-the-control-experiment-are-the-members-who-have-the-year-1181" title="Permalink to this headline">#</a></h3>
 </section>
-<section id="smbb-for-the-second-set-of-50-members-which-we-refer-to-as-smbb-for-smoothed-biomass-burning-fluxes-the-cmip6-biomass-burning-emissions-of-all-relevant-species-for-community-atmosphere-model-version-6-cam6-were-smoothed-in-time-with-an-11-year-running-mean-filter">
-<h2>* smbb: For the second set of 50 members, which we refer to as SMBB (for smoothed biomass burning fluxes), the CMIP6 biomass burning emissions of all relevant species for Community Atmosphere Model version 6 (CAM6) were smoothed in time with an 11-year running mean filter.<a class="headerlink" href="#smbb-for-the-second-set-of-50-members-which-we-refer-to-as-smbb-for-smoothed-biomass-burning-fluxes-the-cmip6-biomass-burning-emissions-of-all-relevant-species-for-community-atmosphere-model-version-6-cam6-were-smoothed-in-time-with-an-11-year-running-mean-filter" title="Permalink to this headline">#</a></h2>
+<section id="smbb-for-the-second-set-of-50-members-which-we-refer-to-as-smbb-for-smoothed-biomass-burning-fluxes-the-cmip6-biomass-burning-emissions-of-all-relevant-species-for-community-atmosphere-model-version-6-cam6-were-smoothed-in-time-with-an-11-year-running-mean-filter-the-control-experiment-are-the-members-who-have-the-year-1191">
+<h3>* smbb: For the second set of 50 members, which we refer to as SMBB (for smoothed biomass burning fluxes), the CMIP6 biomass burning emissions of all relevant species for Community Atmosphere Model version 6 (CAM6) were smoothed in time with an 11-year running mean filter. The control experiment are the members who have the year 1191.<a class="headerlink" href="#smbb-for-the-second-set-of-50-members-which-we-refer-to-as-smbb-for-smoothed-biomass-burning-fluxes-the-cmip6-biomass-burning-emissions-of-all-relevant-species-for-community-atmosphere-model-version-6-cam6-were-smoothed-in-time-with-an-11-year-running-mean-filter-the-control-experiment-are-the-members-who-have-the-year-1191" title="Permalink to this headline">#</a></h3>
 </section>
 <section id="references">
-<h2>References:<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<h3>References:<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h3>
 </section>
 <section id="rodgers-et-al-2021-https-esd-copernicus-org-articles-12-1393-2021">
-<h2>* Rodgers et al. (2021): <a class="reference external" href="https://esd.copernicus.org/articles/12/1393/2021/">https://esd.copernicus.org/articles/12/1393/2021/</a><a class="headerlink" href="#rodgers-et-al-2021-https-esd-copernicus-org-articles-12-1393-2021" title="Permalink to this headline">#</a></h2>
+<h3>* Rodgers et al. (2021): <a class="reference external" href="https://esd.copernicus.org/articles/12/1393/2021/">https://esd.copernicus.org/articles/12/1393/2021/</a><a class="headerlink" href="#rodgers-et-al-2021-https-esd-copernicus-org-articles-12-1393-2021" title="Permalink to this headline">#</a></h3>
 </section>
 <section id="fasullo-et-al-2021-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2021gl093841">
-<h2>* Fasullo et al. (2021): <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL093841">https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL093841</a><a class="headerlink" href="#fasullo-et-al-2021-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2021gl093841" title="Permalink to this headline">#</a></h2>
+<h3>* Fasullo et al. (2021): <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL093841">https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL093841</a><a class="headerlink" href="#fasullo-et-al-2021-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2021gl093841" title="Permalink to this headline">#</a></h3>
 </section>
 <section id="derepentigny-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2020jc016133">
-<h2>* DeRepentigny et al. (2020): <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016133">https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016133</a><a class="headerlink" href="#derepentigny-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2020jc016133" title="Permalink to this headline">#</a></h2>
+<h3>* DeRepentigny et al. (2020): <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016133">https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016133</a><a class="headerlink" href="#derepentigny-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-full-10-1029-2020jc016133" title="Permalink to this headline">#</a></h3>
 </section>
 <section id="danabasoglu-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-10-1029-2019ms001916">
-<h2>* Danabasoglu et al. (2020): <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019MS001916">https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019MS001916</a><a class="headerlink" href="#danabasoglu-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-10-1029-2019ms001916" title="Permalink to this headline">#</a></h2>
+<h3>* Danabasoglu et al. (2020): <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019MS001916">https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019MS001916</a><a class="headerlink" href="#danabasoglu-et-al-2020-https-agupubs-onlinelibrary-wiley-com-doi-10-1029-2019ms001916" title="Permalink to this headline">#</a></h3>
 </section>
 <section id="van-marle-et-al-2017-https-gmd-copernicus-org-articles-10-3329-2017">
-<h2>* van Marle et al. (2017): <a class="reference external" href="https://gmd.copernicus.org/articles/10/3329/2017/">https://gmd.copernicus.org/articles/10/3329/2017/</a><a class="headerlink" href="#van-marle-et-al-2017-https-gmd-copernicus-org-articles-10-3329-2017" title="Permalink to this headline">#</a></h2>
+<h3>* van Marle et al. (2017): <a class="reference external" href="https://gmd.copernicus.org/articles/10/3329/2017/">https://gmd.copernicus.org/articles/10/3329/2017/</a><a class="headerlink" href="#van-marle-et-al-2017-https-gmd-copernicus-org-articles-10-3329-2017" title="Permalink to this headline">#</a></h3>
 </section>
 <section id="oneill-et-al-2016-https-gmd-copernicus-org-articles-9-3461-2016">
-<h2>* O’Neill et al. (2016): <a class="reference external" href="https://gmd.copernicus.org/articles/9/3461/2016/">https://gmd.copernicus.org/articles/9/3461/2016/</a><a class="headerlink" href="#oneill-et-al-2016-https-gmd-copernicus-org-articles-9-3461-2016" title="Permalink to this headline">#</a></h2>
+<h3>* O’Neill et al. (2016): <a class="reference external" href="https://gmd.copernicus.org/articles/9/3461/2016/">https://gmd.copernicus.org/articles/9/3461/2016/</a><a class="headerlink" href="#oneill-et-al-2016-https-gmd-copernicus-org-articles-9-3461-2016" title="Permalink to this headline">#</a></h3>
+</section>
 </section>
 </section>
 

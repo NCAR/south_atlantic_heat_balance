@@ -1,7 +1,6 @@
 format: jb-book
 root: intro
 chapters:
-- file:  Notebook_Template
 - file:  Notebook_Notes
 - file:  Notebook_South_Atlantic_Area
 - file:  Notebook_South_Atlantic_Surface_Analyses_ocn_comp_historical
@@ -16,6 +15,8 @@ chapters:
 - file:  Notebook_South_Atlantic_plots_temporal_series_historical
 - file:  Notebook_ascii_netcdf
 - file:  Notebook_North_Atlantic_XMXL_hovmoller_diagrams_historical
+- file:  south_atlantic_maks_gx1v7.ipynb
+- file:  glorys2v2_moc.ipynb
 
 
 

@@ -1,21 +1,27 @@
 format: jb-book
 root: intro
 chapters:
-- file:  Notebook_Template
+- file:  Notebook_AMOC_SAMOC
+- file:  Notebook_AMOC_South_Atlantic_observations
+- file:  Notebook_glorys2v2_MOC
+- file:  Notebook_lens2_MOC_upper_branch
+- file:  Notebook_lens2_MOCsig2_1deg
+- file:  Notebook_lens2_MOCz
+- file:  Notebook_lens2_South_Atlantic_heat_balance
+- file:  Notebook_lens2_validation
 - file:  Notebook_Notes
 - file:  Notebook_South_Atlantic_Area
-- file:  Notebook_South_Atlantic_Surface_Analyses_ocn_comp_historical
-- file:  Notebook_South_Atlantic_Surface_Analyses_ocn_comp_ssp370
-- file:  Notebook_South_Atlantic_Surface_Analyses_atm_comp_historical
-- file:  Notebook_South_Atlantic_Surface_Analyses_atm_comp_ssp370
-- file:  Notebook_lens2_historical_MOCz_maxima
-- file:  Notebook_lens2_ssp370_MOCz_maxima
-- file:  Notebook_lens2_MOCsig2_1deg
-- file:  Notebook_lens2_historical_MOC_upper_branch
-- file:  Notebook_lens2_ssp370_MOC_upper_branch
-- file:  Notebook_South_Atlantic_plots_temporal_series_historical
-- file:  Notebook_ascii_netcdf
-- file:  Notebook_North_Atlantic_XMXL_hovmoller_diagrams_historical
+- file:  Notebook_South_Atlantic_hovmoller_diagrams
+- file:  Notebook_South_Atlantic_masks
+- file:  Notebook_South_Atlantic_plots_temporal_series
+- file:  Notebook_South_Atlantic_Surface_Analyses_atm_comp
+- file:  Notebook_South_Atlantic_Surface_Analyses_ocn_comp
+
+#<<<<<<< HEAD
+#=======
+#- file:  south_atlantic_maks_gx1v7.ipynb
+#- file:  glorys2v2_moc.ipynb
+#>>>>>>> origin/main
 
 
 

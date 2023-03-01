@@ -1,24 +1,26 @@
 format: jb-book
 root: intro
 chapters:
-- file:  Notebook_AMOC_SAMOC
-- file:  Notebook_AMOC_South_Atlantic_observations
-- file:  Notebook_glorys2v2_MOC
-- file:  Notebook_Heat_Storage_plots
-- file:  Notebook_lens2_MOC_upper_branch
-- file:  Notebook_lens2_MOCsig2_1deg
-- file:  Notebook_lens2_MOCz
-- file:  Notebook_lens2_South_Atlantic_heat_balance
+- file:  Notebook_amoc_samoc
+- file:  Notebook_amoc_south_atlantic_observations
+- file:  Notebook_glorys2v2_moc
+- file:  Notebook_heat_storage_plots
+- file:  Notebook_lens2_moc_upper_branch
+- file:  Notebook_lens2_mocsig2_1deg
+- file:  Notebook_lens2_mocz
+- file:  Notebook_lens2_south_atlantic_heat_balance
+- file:  Notebook_lens2_south_atlantic_heat_balance_pi
+- file:  Notebook_lens2_south_atlantic_clouds
 - file:  Notebook_lens2_validation
-- file:  Notebook_lens2_N_HEAT_components
-- file:  Notebook_Notes
-- file:  Notebook_South_Atlantic_Area
-- file:  Notebook_South_Atlantic_hovmoller_diagrams
-- file:  Notebook_South_Atlantic_masks
-- file:  Notebook_South_Atlantic_plots_temporal_series
-- file:  Notebook_South_Atlantic_Surface_Analyses_atm_comp
-- file:  Notebook_South_Atlantic_Surface_Analyses_ocn_comp
-- file:  Notebook_VT_TV
+- file:  Notebook_lens2_south_atlantic_shf_components
+- file:  Notebook_lens2_n_heat_components
+- file:  Notebook_notes
+- file:  Notebook_south_atlantic_area
+- file:  Notebook_south_atlantic_hovmoller_diagrams
+- file:  Notebook_south_atlantic_masks
+- file:  Notebook_south_atlantic_plots_temporal_series
+- file:  Notebook_south_atlantic_surface_analyses_atm_comp
+- file:  Notebook_south_atlantic_surface_analyses_ocn_comp
 
 #<<<<<<< HEAD
 #=======
